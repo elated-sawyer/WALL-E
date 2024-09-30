@@ -27,7 +27,6 @@ def LLM_request(request, max_retries = 5):
         llm_response = re.sub(r'^[^\w]+|[^\w]+$', '', llm_response)
 
         return llm_response
-        # debug #######################
     except Exception as e:
         log_info(f"Error arises in WorldModel prediction part: {e} Trying again!\n\n")
 
@@ -37,12 +36,10 @@ def LLM_request(request, max_retries = 5):
         )
 
 
-
 class Buffer:
     """ Manages state transitions and logs results for analysis. """
     def __init__(self, worldmodel_mode = 'rules', rules_dir=None, rule_code_file = None, tran_memory_dir = None, model_name="gpt-4o", temperature=0):
         """ Initializes the buffer with a specific model configuration. """
-
 
         self.llm = ChatOpenAI(
             model_name=model_name, 
@@ -51,7 +48,6 @@ class Buffer:
             )
 
         self.worldmodel_mode = worldmodel_mode
-
         try:
             self.record_wrong = load_json_file('/home/**/Workspace/MP5/MP5_agent/agent/buffer_fact/buffer_wrong.json')
         except:
@@ -60,20 +56,14 @@ class Buffer:
             self.record_correct = load_json_file('/home/**/Workspace/MP5/MP5_agent/agent/buffer_fact/buffer_correct.json')
         except:
             self.record_correct = {}
-        
         if rules_dir is None:
             self.rules = {}
         else:
             self.rules = load_json_file(rules_dir)
-
-
         if tran_memory_dir is None:
             self.tran_memory = {}
         else:
             self.tran_memory = load_json_file(tran_memory_dir)
-
-
-
         self.functions_set = []
         if rule_code_file is None:
             pass
@@ -94,7 +84,6 @@ class Buffer:
         for func in self.functions_set:
             feedback, success, suggestion = func(state=state, action=action)
             if not success:  
-                # print('!!!!!!!!!!!!!!!!!!!!!!!!!!error detected by rule function!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
                 action_result = {
                     "feedback": feedback,
                     "success": success,
@@ -109,32 +98,25 @@ class Buffer:
         }
         return action_result
     
-
-
     def worldcode_get_prediction(self, state, action):
         feedback = "You completed the action successfully."
         act_success = True
         suggestion = ''
-
         if self.functions_set:
             success = self.run_all_functions(state, action)
             if not success['success']:
                 act_success = success['success']
                 feedback = success['feedback']
                 suggestion = success['suggestion']
-
         action_result = {
             "feedback": feedback,
             "success": act_success,
             "suggestion": suggestion
         }
-
         return action_result
 
 
-
     def worldmodel_get_prediction(self, state, action, max_retries=5):
-
         # TODO to be check
         # examples = 'Interact with a household to solve a task. Here are some examples.\n' + d[f'react_put_1'] + d[f'react_cool_0'] + d[f'react_heat_0']
 
@@ -143,21 +125,13 @@ class Buffer:
             return {}
 
         try:
-            
             valid_actions = ["go to", "open", "close", "take", "put", "clean", "heat", "cool", "use", "look"]
             for act_type in valid_actions:
                 if action.startswith(act_type):
                     break
-
-
-            # debug #######################            
+     
             rules_act = self.rules.get(act_type, [])
             rules_string = list_to_prompt(rules_act)
-
-            # rules_act = self.rules
-            # rules_string = dict_to_prompt(rules_act)
-
-            # world_model_system = load_prompt("world_model_system").format(rules=rules_string)
             world_model_system = load_prompt("world_model_system").replace("<rules>", rules_string) # .replace("<examples>", examples)
             if self.worldmodel_mode == 'rules':
                 world_model_query = load_prompt("world_model_query").format(
@@ -199,9 +173,7 @@ class Buffer:
                         prediction_json['success'] = success
                         prediction_json['rules check'] = 99
                         return prediction_json
-
             return prediction_json
-            # debug #######################
         except Exception as e:
             log_info(f"Error arises in WorldModel prediction part: {e} Trying again!\n\n")
 
@@ -211,40 +183,27 @@ class Buffer:
                 max_retries=max_retries - 1
             )
 
-
-
-
     # def state_information_transfer(self, state, max_retries=5):
-
     #     # TODO to be check
     #     # examples = 'Interact with a household to solve a task. Here are some examples.\n' + d[f'react_put_1'] + d[f'react_cool_0'] + d[f'react_heat_0']
-
     #     if max_retries == 0:
     #         log_info("************Failed to get workflow. Consider updating your prompt.************\n\n")
     #         return {}
-
     #     try:
     #         # world_model_system = load_prompt("world_model_system").format(rules=rules_string)
-    #         # TODO 将world model 中prompt中的rules prompt部分删去
     #         state_info_transfer_system = load_prompt("state_info_transfer_system")# .replace("<examples>", examples)
     #         state_info_transfer_query = load_prompt("state_info_transfer_query").format(
     #             inital_state=state
     #         )
-
-
     #         messages = [
     #             SystemMessage(content=state_info_transfer_system),
     #             HumanMessage(content=state_info_transfer_query)
     #         ]
-
     #         llm_response = self.llm(messages)
     #         state_info_transfered = llm_response.content
-
     #         # ensure the format
     #         state_info_transfered = fix_and_parse_json(state_info_transfered)
-
     #         return state_info_transfered
-    #         # debug #######################
     #     except Exception as e:
     #         log_info(f"Error arises in WorldModel prediction part: {e} Trying again!\n\n")
 
@@ -253,14 +212,8 @@ class Buffer:
     #             max_retries=max_retries - 1
     #         )
 
-
-
-
-
     def string_buffer_for_transitions_pure(self, interval, task_id):
         """ Processes transitions from a task directory and logs them. """
-        # TODO to check #######################
-        # TODO input_str??? --> json 文件
         record_c_w = {}
         record_correct = {}
         record_wrong = {}
@@ -268,12 +221,9 @@ class Buffer:
         record_wrong_prediction = {}
         for kk in range(interval):
             
-            
             # trajectory_dir = f"/home/**/Workspace/reflexion/alfworld_runs/buffer_traj-testset_agent-wm [wm; 4o-mini; 3 examples]/traj_{task_id+kk}"
             trajectory_dir = f'/home/**/Workspace/reflexion/alfworld_runs/buffer_traj-testset_agent/traj_{task_id+kk}' # for test set
             # trajectory_dir = f'/home/**/Workspace/reflexion/alfworld_runs/buffer_traj-testset_agent-wm/traj_{task_id+kk}' # for training set
-            
-            
             
             files = os.listdir(trajectory_dir)
             # Filter the list to include only JSON files
@@ -283,8 +233,6 @@ class Buffer:
                 with open(file_path, 'r', encoding='utf-8') as file:
                     # input_str = json.load(file)
                     input_str = file.read()
-        # TODO to check #######################
-
                 # Step 1: Remove everything before "Here is the task:"
                 task_start_idx = input_str.find("Here is the task:")
                 if task_start_idx != -1:
@@ -323,7 +271,6 @@ class Buffer:
                                     action_result = False
                                 else:
                                     action_result = True
-
 
                                 # state transfer:
                                 ##################
@@ -381,7 +328,6 @@ class Buffer:
                                         record[name_pos] += 1
                                     else:
                                         record[name_pos] = 1
-
 
                                 # # Print or store the result (depending on your use case)
                                 # print(f"[State text]: {state_text}")
@@ -471,7 +417,7 @@ class Buffer:
 
                     positive=action_success['success']['success']
                     negative=predicted_state_1['success']['success']
-                    if positive != negative: # state info中添加一个action success项，记录上一个action是否成功
+                    if positive != negative: 
                         transition_info = {'state_0': state_0, 'action': action, 'action_result': action_success}
                         self.record_wrong.setdefault(action['name'], []).append(transition_info)
                     else:
@@ -660,24 +606,18 @@ if __name__ == "__main__":
     # model_name = 'gpt-4-turbo'
     model_name = 'gpt-3.5-turbo' # 'gpt-4o-mini' # 'gpt-4o'
     # model_name= "gpt-3.5-turbo"
-
-    
     #rules_dir = '/home/**/Workspace/MP5/MP5_agent/agent/buffer_rules/rules_debug_20240704_135729.json'
     #rules_dir = '/home/**/Workspace/MP5/MP5_agent/agent/buffer_rules/rules_library.json'
-    
     # rules_dir = '/home/**/Workspace/MP5/MP5_agent/agent/0_backup/buffer_rules copy 0731/rules_base.json'
     rules_dir = None
-
     # rules_1 = ['In this context, consider an integer number like 5 and its decimal representation 5.0 to be the same value.']
     buffer = Buffer(worldmodel_mode = 'rules', rules_dir = rules_dir, model_name = model_name)
-
 
 
     ## buffer test
     ##############
     # task_dir = '/home/**/Workspace/MP5/MP5_agent/agent/buffer_traj'
     # buffer.buffer_for_transitions(task_dir)
-
     ## world model pred test
     ########################
     state_initial = {
