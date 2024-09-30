@@ -2,7 +2,7 @@
 
 ## Overview
 
-WALL-E is a cutting-edge project that leverages rule learning to align Large Language Models (LLMs) with dynamic environment dynamics, enhancing their performance as world models for model-based agents. By integrating learned rules, WALL-E bridges the gap between the inherent knowledge of LLMs and the specific requirements of various environments, resulting in more accurate state predictions and optimized action sequences.
+WALL-E is a cutting-edge project that leverages rule learning to align Large Language Models (LLMs) with environment dynamics, enhancing their performance as world models for model-based agents. By integrating learned rules, WALL-E bridges the gap between the inherent knowledge of LLMs and various environments, resulting in more accurate state predictions and optimized action sequences.
 
 ## Demo Release
 
@@ -49,3 +49,5 @@ python run_rulelearning.py \
 ## Future Releases
 
 The complete source code and additional features will be made publicly available upon the acceptance of our accompanying research paper. Stay tuned for updates!
+
+
