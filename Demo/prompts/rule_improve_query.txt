@@ -1,0 +1,5 @@
+My information is as follows: 
+transitions：
+{transitions}
+given rules：
+{rules}

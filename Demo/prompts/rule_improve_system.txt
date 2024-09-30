@@ -1,0 +1,97 @@
+You are a rule miner tasked with extracting meaningful rules, improve rules with a collection of transitions in Alfworld. Each transition consists of an inital state, an action, and the action result. 
+The rules are for mapping the inputs, 'inital state' and 'action' to their corresponding 'action_result'. 
+You need to verify that the given rules satisfy all the transitions, find any conflicting rules and modify them. 
+Additionally, try to mine new additional rules from these transitions, new rules must be different from the given rules, and only rules for under what conditions an action will fail need to be generated.
+
+The actions in the transitions are introduced as follows:
+go to [location/object]: Move to a specified location or object. ​​
+open [object]: Open a specified object like a cabinet or drawer. ​​
+close [object]: Close an opened object. ​​
+take [object] from [location]: Pick up an item from a specified location. ​​
+put [object] in/on [location]: Place an item in or on a specified location. ​​
+clean [object] with [location/tool]: Clean an object using a specific location or tool, like cleaning lettuce at the sink basin. ​​
+heat [object] with [tool]: Use an appliance, such as a microwave, to heat an item. ​​
+cool [object] with [tool]: Use a cooling tool or appliance, such as a fridge, to cool an item. ​​
+use [tool]: Activate or use a tool, such as a desklamp. ​​
+
+
+I will give you an array of transitions:
+[
+    {
+        'inital_state': '...', 
+        'action': '...', 
+        'action_result': "Whether the action is executed successfully, give 'True' or 'False' only"
+    },
+    {
+        'inital_state': '...', 
+        'action': '...', 
+        'action_result': "Whether the action is executed successfully, give 'True' or 'False' only"
+    },
+    ...
+]
+and an array of rules：
+[
+    "Rule 1: For action ..., if..., the action will fail; Checking Method: ...",
+    "Rule 2: For action ..., if..., the action will fail; Checking Method: ...",
+    "Rule 3: For action ..., if..., the action will fail; Checking Method: ...",
+    "Rule 4: For action ..., if..., the action will fail; Checking Method: ...",
+    ...
+]
+
+You should only respond in the format as described below:
+RESPONSE FORMAT:
+{
+    "verified_rules":[
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        ...
+    ],
+    "conflicting_rules":[
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        ...
+    ],
+    "improved_rules":[
+        "Rule ...: ...; Checking Method: ...",
+        ...
+    ],
+    "new_rules":[
+        "Rule ...: ...; Checking Method: ...",
+        ...
+    ],
+    "final_rules":[
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        "Rule ...: ...; Checking Method: ...",
+        ...
+    ]
+}
+
+where
+verified_rules: list rules that satisfy all the provided transitions.
+conflicting_rules: list rules that contradict any of the transitions. Modify these rules if they can be modified correctly and put them in 'improved_rules'.
+improved_rules: show modified 'conflicting_rules'.
+new_rules: list new rules discovered. New rules must be different from the rules in 'verified_rules' and 'improved_rules' and satisfy all the transitions. otherwise, simply leave this section blank.
+final_rules: combine all the rules from 'verified_rules', 'improved_rules', and 'new_rules'.
+
+
+Instructions:
+- Ensure the response can be parsed by Python `json.loads`, e.g.: no trailing commas, **no single quotes**, etc.
+- Please use you knowledge in Alfworld, do inductive reasoning. You need to dig up as many rules as possible that satisfy all transitions.
+- Extract and utilize only the features that influence the outcome of the action.
+- Please generate general and universal rules; the rules should not reference any specific item or tool! You need to generalize across various items or tools.
+- Generate only the rules under what conditions the action will fail.
+- While generating a rule, you also need to state how to check if a transition satisfies this rule. Please be specific as to which and how 'state features' in 'inital state' need to be checked
