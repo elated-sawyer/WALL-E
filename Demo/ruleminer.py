@@ -1,4 +1,4 @@
-from utilsextra import *  # Import necessary functions and classes from utils module
+from utilsextra import * 
 import json
 import datetime
 import tiktoken  # Import tiktoken library
@@ -12,13 +12,12 @@ class RuleMiner:
             model_name (str): The name of the model to use for rule mining.
             temperature (int): The randomness of the model's responses.
         """
-        # openai.api_base = "https://api.chatweb.plus/v1"  # Set the API base URL for OpenAI requests.
         self.llm = ChatOpenAI(
             model_name=model_name, 
             temperature=temperature,
             response_format = { "type": "json_object" },
             n = choice_num
-            )  # Initialize the LLM model. max_tokens=1024, TODO
+            )
         self.tokenizer = tiktoken.get_encoding("cl100k_base")  # Initialize the tokenizer
 
         self.rule_save_dir = rule_save_dir
@@ -98,7 +97,6 @@ class RuleMiner:
             print(f"An error occurred while writing to the file: {e}")
 
 
-    # TODO new 
     def get_rules_update_multistage(self, act_name, tj_buffer, tj_negative, task_id=99, max_retries=5):
         """Attempts to mine rules using the LLM, retrying on failure up to max_retries times.
 
@@ -206,10 +204,7 @@ class RuleMiner:
                 #     rules_temp2 = fix_and_parse_json(message_content)
                 #     rules_golden = rules_temp2['selected_rules']
                 # print(f'rules_golden:{rules_golden}')
-
                 # self._write_to_json(file_path, rules_temp2)
-
-
 
                 # # stage 4: final critic
                 # ##################
@@ -228,7 +223,6 @@ class RuleMiner:
 
                 # print(f'rules_candidate:{rules_candidate}')
                 # self._write_to_json(file_path, rules_temp3)
-
                 # rules_all = {'golden rules':rules_golden, 'rules_candidate':rules_candidate}
                 # self._write_to_json(file_path, rules_all)
 
@@ -264,14 +258,12 @@ class RuleMiner:
             json.dump(self.rules, f, indent=4)  # Save the rules to a file for debugging.
         # self.rules = {}
 
-
 def get_args():
     parser = argparse.ArgumentParser(description="Run Rule Miner script.")
     parser.add_argument("--model_name", type=str, default="gpt-4-turbo", help="Name of the model to use.")
     parser.add_argument("--temperature", type=float, default=0.3, help="Temperature for model generation.")
     parser.add_argument("--buffer", type=str, required=True, help="Path to the buffer JSON file.")
     parser.add_argument("--rule_save_dir", type=str, required=True, help="File to save rules.")
-    
     return parser.parse_args()
 
 
@@ -279,20 +271,14 @@ def get_args():
 if __name__ == "__main__":
     # Parse command line arguments
     args = get_args()
-
     # Create a RuleMiner instance with parsed arguments
     miner = RuleMiner(model_name=args.model_name, temperature=args.temperature, rule_save_dir=args.rule_save_dir)
-
     # Load the positive and negative buffers
     buffer = load_json_file(args.buffer)
-
     # Mine rules
     mined_rules = miner.get_rules_temp(buffer)
-    
     # Print the mined rules
     print(mined_rules)
-
-
 
 
 
