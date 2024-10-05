@@ -1,0 +1,27 @@
+{
+    "take": [
+        "Rule 1: For action 'take', if the 'item_in_hand' is not None, the action will fail; Checking Method: Check if 'item_name' in 'item_in_hand' is not None.",
+        "Rule 2: For action 'take', if the 'current_position' does not match the 'source' location of the object to be taken, the action will fail; Checking Method: Check if 'location_name' in 'current_position' is not equal to 'source' in 'action' arguments."
+    ],
+    "go to": [
+        "Rule 1: For action 'go to', if the 'target' location is not in 'reachable_locations', the action will fail; Checking Method: Check if 'action.args.target' is in 'inital_state.reachable_locations'.",
+        "Rule 2: For action 'go to', if the 'current_position.location_name' is the same as 'action.args.target', the action will fail; Checking Method: Check if 'inital_state.current_position.location_name' is equal to 'action.args.target'.",
+        "Rule 3: For action 'go to', if the 'current_position.status' is 'open', the action will fail; Checking Method: Check if 'inital_state.current_position.status' is 'open'."
+    ],
+    "open": [
+        "Rule 1: For action 'open', if the 'target' is not in 'reachable_locations', the action will fail; Checking Method: Check if the 'target' specified in the action is listed within 'reachable_locations' in the 'initial_state'. If it is not present, the action will fail.",
+        "Rule 2: For action 'open', if the 'current_position' is not at the 'target' location and the 'target' requires proximity, the action will fail; Checking Method: Verify if 'current_position' in 'initial_state' is the same as the 'target' location. If not, and the target requires proximity, the action will fail."
+    ],
+    "heat": [
+        "Rule 2: For action 'heat', if the microwave is open, the action will fail; Checking Method: Check the 'status' of 'current_position' in 'initial_state'. If the status is 'open', the rule applies.",
+        "Rule 1: For action 'heat', if the object to be heated is not in the microwave, the action will fail; Checking Method: Check if the 'obj' specified in the action is listed under 'items_in_locations' for the location 'microwave 1' in 'initial_state'. If the object is not present, the rule applies."
+    ],
+    "put": [
+        "Rule 2: For action 'put', if the item to be placed is not in the actor's possession, the action will fail; Checking Method: Check if the 'item_in_hand' in the initial state matches the 'obj' in the action's arguments and is not null.",
+        "Rule 1: For action 'put', if the target location is already full or the item being put is identical to one already in the location, the action will fail; Checking Method: Check if the 'items_in_locations' list for the 'target' location is at capacity or if it already contains an identical item to the one being put."
+    ],
+    "clean": [
+        "Rule 1: For action clean, if the tool used is not in the same location as the object being cleaned, the action will fail; Checking Method: Verify if the 'tool' specified in the action's 'args' is located in the same 'location_name' as the 'item_in_hand' in 'inital_state'.",
+        "Rule 2: For action clean, if the tool specified is not a recognized cleaning tool or not suitable for the object being cleaned, the action will fail; Checking Method: Verify if the 'tool' in the action's 'args' is a recognized cleaning tool (e.g., cloth, dishsponge, etc.) and is appropriate for the 'item_name' in 'item_in_hand'."
+    ]
+}

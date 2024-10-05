@@ -1,0 +1,8 @@
+utilsextra
+argparse
+tiktoken  # Uncomment this line if needed later
+openai
+requests
+numpy
+langchain
+chromadb
