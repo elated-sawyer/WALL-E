@@ -10,7 +10,9 @@
 
 ![overall_framework](./assests/overall_framework.png)
 
-Rule Learning details. The rule learning module iteratively refines the rules by comparing the world model predicted trajectories with the agent’s actual trajectories in the environment. The rule learning takes five steps: (1) comparing predicted and actual trajectories; (2) learning new rules from real trajectories; (3) refining learned rules; (4) translating natural language rules to code; and (5) rule set pruning via solving a maximum coverage problem. (2)-(4) are handled by LLMs, while (1) and (5) are executed by programs.
+Overview of WALL-E (Left) and Rule Learning details (Right). The agent's action per step is controlled by MPC, where the agent model plans actions in a look-ahead window based on the LLM+rules based world model's predictions. 
+The rule learning module iteratively refines the rules by comparing the world model predicted trajectories with the agent's actual trajectories in the environment. 
+The rule learning takes five steps: (1) comparing predicted and actual trajectories; (2) learning new rules from real trajectories; (3) refining learned rules; (4) translating natural language rules to code; and (5) rule set pruning via solving a maximum coverage problem. (2)-(4) are handled by LLMs, while (1) and (5) are executed by programs.
 
 
 
