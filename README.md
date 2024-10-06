@@ -20,17 +20,16 @@ The rule learning takes five steps: (1) comparing predicted and actual trajector
 - [2024/10] Release a Demo for Rule Learning.
 - [TODO] ...
 
+### Future Releases
+
+The complete source code and additional features will be made publicly available upon the acceptance of our accompanying research paper. Stay tuned for updates!
+
 ## Main results
 
 ### Minecraft
 
 | Method                      | Avg.          | Wooden        | Stone         | Iron          | Golden        | Diamond       | Redstone      |
 |-----------------------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|
-| **VLMs**                     |               |               |               |               |               |               |               |
-| GPT-4V   | 10 (-)        | 41 (-)        | 21 (-)        | 0 (-)         | 0 (-)         | 0 (-)         | 0 (-)         |
-| Jarvis-1 | 42 (-)       | 94 (-)        | 89 (-)        | 36 (-)        | 7 (-)         | 9 (-)         | 16 (-)        |
-| Optimus-1 | 47 (-)       | 99 (-)        | 92 (-)        | 47 (-)        | 9 (-)         | 12 (-)        | 25 (-)        |
-| **LLMs**                     |               |               |               |               |               |               |               |
 | GPT-3.5  | 10 (-)                | 40 (-)                | 20 (-)              | 0 (-)                 | 0 (-)                 | 0 (-)                 | 0 (-)         |
 | DEPS   | 37 (35.36)            | 83 (10.67)            | 41 (33.63)          | 35 (35.27)            | 22 (45.29)            | 24 (42.46)            | 17 (45.22)    |
 | GITM    | 54 (25.49)            | 96 (3.42)             | ***92*** (6.01)     | 57 (23.93)            | 39 (37.77)            | 30 (38.90)            | 22 (42.63)    |
@@ -45,13 +44,6 @@ The rule learning takes five steps: (1) comparing predicted and actual trajector
 
 | Method                        | Avg. | Pick | Clean | Heat | Cool | Examine | Picktwo |
 |-------------------------------|------|------|-------|------|------|---------|---------|
-| **VLMs**                      |      |      |       |      |      |         |         |
-| MiniGPT-4 | 16   | 4    | 0     | 19   | 17   | 6       | 6       |
-| BLIP-2      | 13   | 0    | 0     | 14   | 22   | 0       | 0       |
-| LLAMA-Adapter | 13   | 7    | 12    | 0    | 27   | 0       | 0       |
-| InstructBLIP | 20   | 17   | 12    | 17   | 22   | 0       | 0       |
-| EMMA      | 82   | 71   | 94    | 85   | 83   | 88      | 67      |
-| **LLMs**                              |      |      |       |      |      |         |         |
 | BUTLER     | 26       | 31       | 41       | 60       | 27       | 12       | 29       |
 | GPT-BUTLER | 69       | 67       | 83       | **100**  | 78       | 33       | 67       |
 | DEPS             | 76       | 50       | **100**  | 92       | 78       | 89       | 78       |
@@ -70,7 +62,7 @@ The rule learning takes five steps: (1) comparing predicted and actual trajector
 
 The current repository includes a demo that allows users to perform rule learning, learning rules in natural language. You can choose to either:
 
-1. Use the trajectories we provide for rule mining.
+1. Use the example trajectories we provide for rule mining.
 2. Collect and use your own trajectories from your environment for rule learning.
 
 ### Setup
@@ -144,7 +136,7 @@ If you use our work, please cite our paper using the following BibTeX entry:
 ```bibtex
 @article{yourpaper2024,
   title={WALL-E: Rule Learning for Aligned Large Language Model World Models},
-  author={Your Name and Collaborators},
+  author={Anonymous authors},
   journal={arXiv preprint arXiv:xxxx.xxxxx},
   year={2024}
 }
