@@ -57,7 +57,7 @@ The complete source code and additional features will be made publicly available
 | **Human Performance**                 | 91   | -    | -     | -    | -    | -       | -       |
 
 - The value in each cell represents the **Success Rate (%)**.
-- The `-` symbol indicates no information available for those specific categories.
+- The `-` symbol indicates no information available for those entries.
 
 ## Demo Release
 
