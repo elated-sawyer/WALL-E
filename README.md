@@ -124,10 +124,6 @@ python run_rulelearning.py \
     --rule_save_dir /path/to/save/rules.json
 ```
 
-## Future Releases
-
-The complete source code and additional features will be made publicly available upon the acceptance of our accompanying research paper. Stay tuned for updates!
-
 
 ## Citation
 
