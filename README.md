@@ -89,8 +89,7 @@ python run_rulelearning.py \
 #### Option 2: Collect Your Own Trajectories
 
 
-If you prefer to collect your own data, gather trajectories from your environment and store them in the appropriate JSON format. Replace `"/path/to/buffer.json"` with the path to your own trajectory data:
-
+If you prefer to collect your own data, gather trajectories from your environment and store them in the appropriate JSON format.
 Trajectories should be saved in JSON format following the structure below:
 
 ```json
@@ -115,7 +114,7 @@ Trajectories should be saved in JSON format following the structure below:
 }
 ```
 
-Then, 
+Replace `"/path/to/buffer.json"` with the path to your own trajectory data:
 
 ```bash
 python run_rulelearning.py \
