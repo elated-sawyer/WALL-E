@@ -213,9 +213,9 @@ class RuleMiner:
 
                 self.rules[act_name] = rules_candidate
 
-                # with open(f'/home/**/Workspace/MP5/MP5_agent/agent/buffer_rules/rules_debug_oneshot_taskID{task_id}_actname{act_name}_batch{i}.json', 'w') as f:
+                # with open(f'/home/**/Workspace/**/agent/buffer_rules/rules_debug_oneshot_taskID{task_id}_actname{act_name}_batch{i}.json', 'w') as f:
                 #     json.dump(parsed_data, f, indent=4)  # Save the rules to a file for debugging.
-                # with open(f'/home/**/Workspace/MP5/MP5_agent/agent/buffer_rules/rules_debug_oneshot_finalrules_taskID{task_id}_actname{act_name}.json', 'w') as f:
+                # with open(f'/home/**/Workspace/**/agent/buffer_rules/rules_debug_oneshot_finalrules_taskID{task_id}_actname{act_name}.json', 'w') as f:
                 #     json.dump(rules_final, f, indent=4)  # Save the rules to a file for debugging.
             return rules_candidate  # Parse the JSON rules and handle errors in formatting.
         except Exception as e:
@@ -287,7 +287,7 @@ if __name__ == "__main__":
 #     rule_save_dir = 'Demo/rule_save_dir/rules_debug.json'
 #     miner = RuleMiner(model_name=model_name, temperature=temperature, rule_save_dir = rule_save_dir)  # Create a RuleMiner instance
     
-#     # buffer = load_json_file('/home/**/Workspace/MP5/MP5_agent/agent/buffer_fact copy 0703/buffer_correct.json')
+#     # buffer = load_json_file('/home/**/Workspace/**/agent/buffer_fact copy 0703/buffer_correct.json')
 #     buffer = load_json_file('Demo/buffer_fact/traj_demo.json')
 
 #     mined_rules = miner.get_rules_temp(buffer)  # Mine rules
