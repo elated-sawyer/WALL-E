@@ -82,7 +82,7 @@ We provide a set of sample trajectories for rule learning. Simply specify the pa
 python run_rulelearning.py \
     --model_name gpt-4 \
     --temperature 0.5 \
-    --buffer Demo/buffer_fact/traj_demo.json \
+    --buffer buffer_fact/traj_demo.json \
     --rule_save_dir /path/to/save/rules.json
 ```
 
