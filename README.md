@@ -89,8 +89,7 @@ python run_rulelearning.py \
 #### Option 2: Collect Your Own Trajectories
 
 
-If you prefer to collect your own data, gather trajectories from your environment and store them in the appropriate JSON format.
-Trajectories should be saved in JSON format following the structure below:
+If you prefer to collect your own data, gather trajectories from your environment and store them in the appropriate JSON format:
 
 ```json
 {
