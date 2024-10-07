@@ -77,7 +77,7 @@ pip install -r requirements.txt
 ### Running Rule Learning
 
 #### Option 1: Use Provided Trajectories
-We provide a set of sample trajectories for rule learning. Simply specify the path to the provided JSON file:
+We provide an example subset of trajectories for rule learning. Simply specify the path to the provided JSON file:
 
 ```bash
 python run_rulelearning.py \
