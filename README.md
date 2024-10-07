@@ -64,7 +64,7 @@ The complete source code and additional features will be made publicly available
 
 The current repository includes a demo that allows users to perform rule learning, learning rules in natural language. You can choose to either:
 
-1. Use the example trajectories we provide for rule mining.
+1. Use an example subset of trajectories we provide for rule mining.
 2. Collect and use your own trajectories from your environment for rule learning.
 
 ### Setup
