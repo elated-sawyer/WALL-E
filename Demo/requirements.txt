@@ -1,4 +1,3 @@
-argparse
 tiktoken  # Uncomment this line if needed later
 openai
 requests
