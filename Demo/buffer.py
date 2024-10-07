@@ -53,11 +53,11 @@ class Buffer:
         self.worldmodel_mode = worldmodel_mode
 
         try:
-            self.record_wrong = load_json_file('/home/**/Workspace/MP5/MP5_agent/agent/buffer_fact/buffer_wrong.json')
+            self.record_wrong = load_json_file('/home/**/Workspace/**/agent/buffer_fact/buffer_wrong.json')
         except:
             self.record_wrong = {}
         try:
-            self.record_correct = load_json_file('/home/**/Workspace/MP5/MP5_agent/agent/buffer_fact/buffer_correct.json')
+            self.record_correct = load_json_file('/home/**/Workspace/**/agent/buffer_fact/buffer_correct.json')
         except:
             self.record_correct = {}
         
@@ -364,7 +364,7 @@ class Buffer:
         """ Processes transitions from a task directory and logs them. """
         ########################
         for kk in range(interval):
-            trajectory_dir = f"/home/**/Workspace/MP5/MP5_agent/agent/buffer_traj-trainingset/traj_{task_id+kk}"
+            trajectory_dir = f"/home/**/Workspace/**/agent/buffer_traj-trainingset/traj_{task_id+kk}"
             
             files = os.listdir(trajectory_dir)
             # Filter the list to include only JSON files
@@ -400,18 +400,18 @@ class Buffer:
                         # TODO to be check
                         self.memory.add_successful_transition(action, transition_info)
                 
-                with open(f'/home/**/Workspace/MP5/MP5_agent/agent/buffer_fact/buffer_wrong_taskID{task_id}_interval{interval}_negativesamples.json', 'w') as f:
+                with open(f'/home/**/Workspace/**/agent/buffer_fact/buffer_wrong_taskID{task_id}_interval{interval}_negativesamples.json', 'w') as f:
                     json.dump(self.record_wrong, f, indent=4)
-                with open(f'/home/**/Workspace/MP5/MP5_agent/agent/buffer_fact/buffer_correct_taskID{task_id}_interval{interval}_negativesamples.json', 'w') as f:
+                with open(f'/home/**/Workspace/**/agent/buffer_fact/buffer_correct_taskID{task_id}_interval{interval}_negativesamples.json', 'w') as f:
                     json.dump(self.record_correct, f, indent=4)
                 print(f'{file_path} collection is completed')
 
-        with open(f'/home/**/Workspace/MP5/MP5_agent/agent/buffer_fact/buffer_wrong_taskID{task_id}_interval{interval}_negativesamples.json', 'w') as f:
+        with open(f'/home/**/Workspace/**/agent/buffer_fact/buffer_wrong_taskID{task_id}_interval{interval}_negativesamples.json', 'w') as f:
             json.dump(self.record_wrong, f, indent=4)
-        with open(f'/home/**/Workspace/MP5/MP5_agent/agent/buffer_fact/buffer_correct_taskID{task_id}_interval{interval}_negativesamples.json', 'w') as f:
+        with open(f'/home/**/Workspace/**/agent/buffer_fact/buffer_correct_taskID{task_id}_interval{interval}_negativesamples.json', 'w') as f:
             json.dump(self.record_correct, f, indent=4)
         
-        with open(f'/home/**/Workspace/MP5/MP5_agent/agent/buffer_trans_memory/buffer_trans_memory_taskID{task_id}_interval{interval}.json', 'w') as f:
+        with open(f'/home/**/Workspace/**/agent/buffer_trans_memory/buffer_trans_memory_taskID{task_id}_interval{interval}.json', 'w') as f:
             json.dump(self.memory.transition, f, indent=4)
         print(f'[Stage]buffer_for_transitions--task_id:{task_id}')
 
@@ -422,7 +422,7 @@ class Buffer:
         """ Processes transitions from a task directory and logs them. """
         ########################
         for kk in range(interval):
-            trajectory_dir = f"/home/**/Workspace/MP5/MP5_agent/agent/buffer_traj-trainingset/traj_{task_id+kk}"
+            trajectory_dir = f"/home/**/Workspace/**/agent/buffer_traj-trainingset/traj_{task_id+kk}"
             
             files = os.listdir(trajectory_dir)
             # Filter the list to include only JSON files
@@ -446,12 +446,12 @@ class Buffer:
                     self.record_wrong.setdefault(action['name'], []).append(transition_info)
                     self.memory.add_successful_transition(action, transition_info)
 
-        with open(f'/home/**/Workspace/MP5/MP5_agent/agent/buffer_fact/buffer_wrong_taskID{task_id}_interval{interval}.json', 'w') as f:
+        with open(f'/home/**/Workspace/**/agent/buffer_fact/buffer_wrong_taskID{task_id}_interval{interval}.json', 'w') as f:
             json.dump(self.record_wrong, f, indent=4)
-        with open(f'/home/**/Workspace/MP5/MP5_agent/agent/buffer_fact/buffer_correct_taskID{task_id}_interval{interval}.json', 'w') as f:
+        with open(f'/home/**/Workspace/**/agent/buffer_fact/buffer_correct_taskID{task_id}_interval{interval}.json', 'w') as f:
             json.dump(self.record_correct, f, indent=4)
         
-        with open(f'/home/**/Workspace/MP5/MP5_agent/agent/buffer_trans_memory/buffer_trans_memory_taskID{task_id}_interval{interval}.json', 'w') as f:
+        with open(f'/home/**/Workspace/**/agent/buffer_trans_memory/buffer_trans_memory_taskID{task_id}_interval{interval}.json', 'w') as f:
             json.dump(self.memory.transition, f, indent=4)
         print(f'[Stage]buffer_for_transitions--task_id:{task_id}')
 
@@ -500,11 +500,11 @@ class Buffer:
                             else:
                                 record[name_pos] = 1
 
-                        with open(f'/home/**/Workspace/MP5/MP5_agent/agent/task_result_worldmodel/world_model_test_statistic_[{worldmodelstyle}].json', 'w') as f:
+                        with open(f'/home/**/Workspace/**/agent/task_result_worldmodel/world_model_test_statistic_[{worldmodelstyle}].json', 'w') as f:
                             json.dump(record, f, indent=4)
-                        with open(f'/home/**/Workspace/MP5/MP5_agent/agent/task_result_worldmodel/world_model_test_wrongpredict_[{worldmodelstyle}].json', 'w') as f:
+                        with open(f'/home/**/Workspace/**/agent/task_result_worldmodel/world_model_test_wrongpredict_[{worldmodelstyle}].json', 'w') as f:
                             json.dump(self.record_wrong, f, indent=4)
-                        with open(f'/home/**/Workspace/MP5/MP5_agent/agent/task_result_worldmodel/world_model_test_rightpredict_[{worldmodelstyle}].json', 'w') as f:
+                        with open(f'/home/**/Workspace/**/agent/task_result_worldmodel/world_model_test_rightpredict_[{worldmodelstyle}].json', 'w') as f:
                             json.dump(self.record_correct, f, indent=4)
                         print(f'{file_path} collection is completed')
 
@@ -576,10 +576,10 @@ if __name__ == "__main__":
     # model_name= "gpt-3.5-turbo"
 
     
-    #rules_dir = '/home/**/Workspace/MP5/MP5_agent/agent/buffer_rules/rules_debug_20240704_135729.json'
-    #rules_dir = '/home/**/Workspace/MP5/MP5_agent/agent/buffer_rules/rules_library.json'
+    #rules_dir = '/home/**/Workspace/**/agent/buffer_rules/rules_debug_20240704_135729.json'
+    #rules_dir = '/home/**/Workspace/**/agent/buffer_rules/rules_library.json'
     
-    # rules_dir = '/home/**/Workspace/MP5/MP5_agent/agent/0_backup/buffer_rules copy 0731/rules_base.json'
+    # rules_dir = '/home/**/Workspace/**/agent/0_backup/buffer_rules copy 0731/rules_base.json'
     rules_dir = None
 
     # rules_1 = ['In this context, consider an integer number like 5 and its decimal representation 5.0 to be the same value.']
@@ -589,7 +589,7 @@ if __name__ == "__main__":
 
     ## buffer test
     ##############
-    # task_dir = '/home/**/Workspace/MP5/MP5_agent/agent/buffer_traj'
+    # task_dir = '/home/**/Workspace/**/agent/buffer_traj'
     # buffer.buffer_for_transitions(task_dir)
 
     ## world model pred test
@@ -651,9 +651,7 @@ if __name__ == "__main__":
                     ]
                 }
             }}
-    # with open('/home/**/Workspace/MP5/MP5_agent/agent/buffer_act/action_info_debug_0_1.json', 'r') as f:
-    #with open('/home/**/Workspace/MP5/MP5_agent/agent/0_backup/buffer_act copy 0731/action_info_debug_0_2_5.json', 'r') as f:
-    with open('/home/**/Workspace/MP5/MP5_agent/agent/0_backup/buffer_act copy 0731/action_info_debug_0_1_5.json', 'r') as f:
+    with open('/home/**/Workspace/**/agent/0_backup/buffer_act copy 0731/action_info_debug_0_1_5.json', 'r') as f:
         workflow_dict = json.load(f)
     every_task_max_retries = 99
     every_task_max_planning_retries = 99
