@@ -114,7 +114,7 @@ Trajectories should be saved in JSON format following the structure below:
 }
 ```
 
-Replace `"/path/to/buffer.json"` with the path to your own trajectory data:
+Replace `"/path/to/your_collected_trajectories.json"` with the path to your own trajectory data:
 
 ```bash
 python run_rulelearning.py \
