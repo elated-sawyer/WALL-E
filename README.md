@@ -1,6 +1,4 @@
-# WALL-E
-
-**WALL-E: World Alignment by Rule Learning Improves World Model-based LLM Agents**
+# WALL-E: World Alignment by Rule Learning Improves World Model-based LLM Agents
 
 <!-- [[arXiv](https://arxiv.org/pdf/XXX)] [[code](https://huggingface.co/XXXXXX)] -->
 [arXiv] [code]
