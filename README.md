@@ -1,6 +1,6 @@
 # WALL-E
 
-**WALL-E: Rule Learning for Aligned Large Language Model World Models**
+**WALL-E: World Alignment by Rule Learning Improves World Model-based LLM Agents**
 
 <!-- [[arXiv](https://arxiv.org/pdf/XXX)] [[code](https://huggingface.co/XXXXXX)] -->
 [arXiv] [code]
@@ -25,7 +25,7 @@ The rule learning takes five steps: (1) comparing predicted and actual trajector
 
 The complete source code and additional features will be made publicly available upon the acceptance of our accompanying research paper. Stay tuned for updates!
 
-## Partial Main Results
+## Main Results on LLM Agents
 
 ### Minecraft
 
