@@ -3,4 +3,5 @@ openai
 requests
 numpy
 langchain
+langchain-community
 chromadb
