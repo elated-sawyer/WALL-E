@@ -23,7 +23,7 @@ The rule learning takes five steps: (1) comparing predicted and actual trajector
 
 The complete source code and additional features will be made publicly available upon the acceptance of our accompanying research paper. Stay tuned for updates!
 
-## Main Results on LLM Agents
+## Main Results
 
 ### Minecraft
 
