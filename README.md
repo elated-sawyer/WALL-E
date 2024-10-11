@@ -127,10 +127,13 @@ python run_rulelearning.py \
 If you use our work, please cite our paper using the following BibTeX entry:
 
 ```bibtex
-@article{ourpaper2024,
-  title={WALL-E: Rule Learning for Aligned Large Language Model World Models},
-  author={Anonymous authors},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
-  year={2024}
+@misc{zhou2024walleworldalignmentrule,
+      title={WALL-E: World Alignment by Rule Learning Improves World Model-based LLM Agents}, 
+      author={Siyu Zhou and Tianyi Zhou and Yijun Yang and Guodong Long and Deheng Ye and Jing Jiang and Chengqi Zhang},
+      year={2024},
+      eprint={2410.07484},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2410.07484}, 
 }
 ```
