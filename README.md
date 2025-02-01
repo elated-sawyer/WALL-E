@@ -119,4 +119,3 @@ python run_rulelearning.py \
     --buffer /path/to/your_collected_trajectories.json \
     --rule_save_dir /path/to/save/rules.json
 ```
-```
