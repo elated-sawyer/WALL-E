@@ -1,5 +1,0 @@
-minedojo
-openai
-langchain
-chromadb
-tiktoken
