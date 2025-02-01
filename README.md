@@ -1,21 +1,18 @@
-# WALL-E: World Alignment by Rule Learning Improves World Model-based LLM Agents
+# WALL-E: World Alignment by NeuroSymbolic Learning improves World Model-based LLM Agents
 
-[[arXiv](https://arxiv.org/abs/2410.07484)] [[code](https://github.com/elated-sawyer/WALL-E)]
+[arXiv][code]
 
 ## Abstract:
-> Can large language models (LLMs) directly serve as powerful world models for model-based agents? While the gaps between the prior knowledge of LLMs and the specified environment's dynamics do exist, our study reveals that the gaps can be bridged by aligning an LLM with its deployed environment and such "world alignment" can be efficiently achieved by rule learning on LLMs. Given the rich prior knowledge of LLMs, only a few additional rules suffice to align LLM predictions with the specified environment dynamics. To this end, we propose a neurosymbolic approach to learn these rules gradient-free through LLMs, by inducing, updating, and pruning rules based on comparisons of agent-explored trajectories and world model predictions. The resulting world model is composed of the LLM and the learned rules. Our embodied LLM agent "WALL-E" is built upon model-predictive control (MPC). By optimizing look-ahead actions based on the precise world model, MPC significantly improves exploration and learning efficiency. Compared to existing LLM agents, WALL-E's reasoning only requires a few principal rules rather than verbose buffered trajectories being included in the LLM input. On open-world challenges in Minecraft and ALFWorld, WALL-E achieves higher success rates than existing methods, with lower costs on replanning time and the number of tokens used for reasoning. In Minecraft, WALL-E exceeds baselines by 15-30% in success rate while costing 8–20 fewer replanning rounds and only 60–80% of tokens. In ALFWorld, its success rate surges to a new record high of 95% only after 6 iterations.
+> Can we build accurate world models out of large language models (LLMs)? How can world models benefit LLM agents? The gap between the prior knowledge of LLMs and the specified environment's dynamics usually bottlenecks LLMs' performance as world models. To bridge the gap, we propose a training-free "world alignment" that learns an environment's symbolic knowledge complementary to LLMs. The symbolic knowledge covers action rules, knowledge graphs, and scene graphs, which are extracted by LLMs from exploration trajectories and encoded into executable codes to regulate LLM agents' policies. We further propose an RL-free, model-based agent "WALL-E" through the model-predictive control (MPC) framework. Unlike classical MPC requiring costly optimization on the fly, we adopt an LLM agent as an efficient look-ahead optimizer of future steps' actions by interacting with the neurosymbolic world model. While the LLM agent's strong heuristics make it an efficient planner in MPC, the quality of its planned actions is also secured by the accurate predictions of the aligned world model. They together considerably improve learning efficiency in a new environment. On open-world challenges in Mars (Minecraft) and ALFWorld (embodied indoor environments), WALL-E significantly outperforms existing methods, e.g., surpassing baselines in Mars by 16.1%–51.6% of success rate and by at least 61.7% in score. In ALFWorld, it achieves a new record 98% success rate after only 4 iterations.
 
 
 ![overall_framework](./assests/overall_framework.png)
 
-Overview of WALL-E (Left) and Rule Learning details (Right). The agent's action per step is controlled by MPC, where the agent model plans actions in a look-ahead window based on the LLM+rules based world model's predictions. 
-The rule learning module iteratively refines the rules by comparing the world model predicted trajectories with the agent's actual trajectories in the environment. 
-The rule learning takes five steps: (1) comparing predicted and actual trajectories; (2) learning new rules from real trajectories; (3) refining learned rules; (4) translating natural language rules to code; and (5) rule set pruning via solving a maximum coverage problem. (2)-(4) are handled by LLMs, while (1) and (5) are executed by programs.
-
-
+Overview of WALL-E (Left) and NeuroSymbolic Learning details (Right). The agent determines actions to take via MPC, where an LLM optimizes future steps’ actions by interacting with a neurosymbolic world model.
+WALL-E iteratively refines the symbolic knowledge with the agent’s actual trajectories in the environment and the world model predicted trajectories. The NeuroSymbolic learning takes 4 stages: (1) comparing predicted and actual trajectories; (2) learning new symbolic knowledge from real trajectories; (3) translating symbolic knowledge to code; and (4) Code rule set pruning via solving a maximum coverage problem.
 
 ## Updates
-- [2024/10] Release a Demo for Rule Learning.
+- [2024/10] Release a Demo for NeuroSymbolic Learning.
 - [TODO] ...
 
 ### Future Releases
@@ -24,19 +21,22 @@ The complete source code and additional features will be made publicly available
 
 ## Main Results
 
-### Minecraft
+### Mars
 
-| Method                      | Avg.          | Wooden        | Stone         | Iron          | Golden        | Diamond       | Redstone      |
-|-----------------------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|
-| GPT-3.5                      | 10 (-)                | 40 (-)                | 20 (-)              | 0 (-)                 | 0 (-)                 | 0 (-)                 | 0 (-)         |
-| DEPS                         | 37 (35.36)            | 83 (10.67)            | 41 (33.26)          | 33 (35.27)            | 22 (45.29)            | 24 (42.46)            | 17 (45.22)    |
-| GITM                         | 54 (25.49)            | 96 (3.42)             | **92** (6.01)     | 57 (23.93)            | 29 (37.17)            | 30 (39.80)            | 22 (42.63)    |
-| WALL-E w/o WM                | 61 (23.13)            | 94 (5.04)             | 89 (9.58)           | **67** (**18.56**)    | 33 (39.67)            | 41 (32.73)            | 43 (33.21)    |
-| WALL-E (ours)                | **69** (**15.77**)    | **98** (**1.64**)     | 91 (**4.58**)       | 63 (19.38)            | **69** (**15.61**)    | **46** (**27.08**)    | **48** (**26.33**)    |
-| **Human Performance**        | 59 (-)                | 100 (-)               | 100 (-)             | 86 (-)                | 17 (-)                | 17 (-)                | 33 (-)        |
+| MOD. TYPE     | React           | Reflexion        | Skill Library         | IfR          | WALL-E        |
+|---------------|---------------|---------------|---------------|---------------|---------------|
+| DEFAULT       | 7.7 ± 1.6    | 6.0 ± 1.7    | 8.0 ± 2.1    | 9.0 ± 2.3    | **9.5 ± 2.1**    |
+| TERRAIN       | 7.4 ± 2.7    | 6.4 ± 3.0     | 9.5 ± 2.9 | 8.0 ± 3.7 | **10.7 ± 2.6** |
+| SURVIVAL      | 6.4 ± 3.7 | 4.6 ± 3.9 | 7.9 ± 2.9 | 7.7 ± 3.7 | **13.8 ± 4.4** |
+| TASK. DEP.    | 5.0 ± 2.1 | 3.2 ± 1.6 | 1.5 ± 1.9 | 5.6 ± 2.9 | **6.4 ± 2.9** |
+| TERR. SURV.   | 6.7 ± 2.5 | 4.9 ± 2.5 |3.0 ± 2.5 | **6.8 ± 1.9** | 5.5 ± 2.7 |
+| TERR. TASK.   | 4.8 ± 2.0 | 5.3 ± 2.5 | 5.5 ± 1.5 | **6.9 ± 1.8** | 5.8 ± 2.2 |
+| SURV. TASK.   | 1.5 ± 1.3 | 1.0 ± 1.6 | 2.3 ± 1.5 | **3.3 ± 1.4** | 3.2 ± 1.4 |
+| ALL THREE     | 0.7 ± 1.6 | −0.4 ± 0.7 | −0.5 ± 0.5 | 0.1 ± 0.5 | **1.3 ± 1.6** |
+| AVG.          | 4.6 | 3.6 | 4.2 | 5.5 | **6.7** |
 
-- The first value in each cell represents the **Success Rate (%)**, and the value in parentheses represents the **Replanning Rounds**.
-- The `(-)` symbol indicates no replanning round information is provided for those entries.
+- The table shows rewards and corresponding std.
+- MOD. TYPE refers to World types, including Default (original Crafter setting with no modifications), individual modifications (Terrain, Survival, Task Dependency), and combinations of two or all three modifications (Terr. Surv., Terr. Task., Surv. Task., All Three).
 
 ### ALFWorld
 
@@ -50,18 +50,17 @@ The complete source code and additional features will be made publicly available
 | AdaPlanner          | 91         | **100**    | **100**    | 89         | **100**    | 97         | 47     |
 | Reflexion          | 86         | 92         | 94         | 70         | 81         | 90         | 88     |
 | RAFA                | **95**     | **100**    | 97         | 91         | 95         | **100**    | 82     |
-| WALL-E (ours)                          | **95**     | **100**    | 97         | **100**    | 86         | 85         | **100**    |
+| WALL-E (ours)                          | **98**     | **100**    | **100**        | 96    | **100**         | **100**         | 94    |
 | **Human Performance**                 | 91   | -    | -     | -    | -    | -       | -       |
-
 
 - The value in each cell represents the **Success Rate (%)**.
 - The `-` symbol indicates no information available for those entries.
 
 ## Demo Release
 
-The current repository includes a demo that allows users to perform rule learning, learning rules in natural language. You can choose to either:
+The current repository includes a demo that allows users to perform neurosymbolic learning, learning rules in natural language. You can choose to either:
 
-1. Use an example subset of trajectories we provide for rule mining.
+1. Use an example subset of trajectories we provide for rule learning.
 2. Collect and use your own trajectories from your environment for rule learning.
 
 ### Setup
@@ -120,17 +119,4 @@ python run_rulelearning.py \
     --buffer /path/to/your_collected_trajectories.json \
     --rule_save_dir /path/to/save/rules.json
 ```
-
-
-## Citation
-
-If you use our work, please cite our paper using the following BibTeX entry:
-
-```bibtex
-@article{zhou2024wall,
-  title={WALL-E: World Alignment by Rule Learning Improves World Model-based LLM Agents},
-  author={Zhou, Siyu and Zhou, Tianyi and Yang, Yijun and Long, Guodong and Ye, Deheng and Jiang, Jing and Zhang, Chengqi},
-  journal={arXiv preprint arXiv:2410.07484},
-  year={2024}
-}
 ```
