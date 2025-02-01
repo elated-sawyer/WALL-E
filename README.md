@@ -12,7 +12,7 @@ Overview of WALL-E (Left) and NeuroSymbolic Learning details (Right). The agent 
 WALL-E iteratively refines the symbolic knowledge with the agent’s actual trajectories in the environment and the world model predicted trajectories. The NeuroSymbolic learning takes 4 stages: (1) comparing predicted and actual trajectories; (2) learning new symbolic knowledge from real trajectories; (3) translating symbolic knowledge to code; and (4) Code rule set pruning via solving a maximum coverage problem.
 
 ## Updates
-- [2025/01] Release a Demo for NeuroSymbolic Learning.
+- [01/2025] Release a Demo for NeuroSymbolic Learning.
 - [TODO] ...
 
 ### Future Releases
