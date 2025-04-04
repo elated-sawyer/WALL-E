@@ -4,7 +4,7 @@
 
 
 
-![teaser](./assests/teaser.png)
+![teaser](./assests/teaser_1.png)
 
 > WALL-E mining a diamond in Mars. Step 1-2: the agent makes decision via MPC with the initial unaligned world model, resulting in a failed action for mining iron. Step 3: leveraging previous trajectories and world model predictions, WALL-E learns symbolic knowledge, including rules, knowledge graphs, and scene graphs. Step 4-5: the learned symbolic knowledge helps the world model make accurate predictions and correct the previous mistake. Step 6-7: the agent adjusts its decision accordingly and replaces stone pickaxe with iron pickaxe toward completing the task.
 
