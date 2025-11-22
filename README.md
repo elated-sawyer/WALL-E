@@ -1,7 +1,6 @@
 # WALL-E: World Alignment by NeuroSymbolic Learning improves World Model-based LLM Agents
 
-[arXiv][code]
-
+[[arXiv](https://arxiv.org/abs/2504.15785)]
 
 
 ![teaser](./assests/teaser_figure.png)
@@ -20,8 +19,9 @@ Overview of WALL-E (Left) and NeuroSymbolic Learning details (Right). The agent 
 WALL-E iteratively refines the symbolic knowledge with the agent’s actual trajectories in the environment and the world model predicted trajectories. The NeuroSymbolic learning takes 4 stages: (1) comparing predicted and actual trajectories; (2) learning new symbolic knowledge from real trajectories; (3) translating symbolic knowledge to code; and (4) Code rule set pruning via solving a maximum coverage problem.
 
 ## Updates
-- [01/2025] Release a Demo for NeuroSymbolic Learning.
-- [TODO] ...
+- [TODO] Public release of the codebase is coming soon.
+- [09/2025] 🎉 WALL-E has been accepted to NeurIPS 2025!
+- [01/2025] Released a demo for our NeuroSymbolic Learning framework.
 
 ### Future Releases
 
