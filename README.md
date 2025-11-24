@@ -18,14 +18,10 @@
 Overview of WALL-E (Left) and NeuroSymbolic Learning details (Right). The agent determines actions to take via MPC, where an LLM optimizes future steps’ actions by interacting with a neurosymbolic world model.
 WALL-E iteratively refines the symbolic knowledge with the agent’s actual trajectories in the environment and the world model predicted trajectories. The NeuroSymbolic learning takes 4 stages: (1) comparing predicted and actual trajectories; (2) learning new symbolic knowledge from real trajectories; (3) translating symbolic knowledge to code; and (4) Code rule set pruning via solving a maximum coverage problem.
 
-## Updates
-- [TODO] Public release of the codebase is coming soon.
+<!-- ## Updates
 - [09/2025] 🎉 WALL-E has been accepted to NeurIPS 2025!
-- [01/2025] Released a demo for our NeuroSymbolic Learning framework.
+- [01/2025] Released a demo for our NeuroSymbolic Learning framework. -->
 
-### Future Releases
-
-The complete source code and additional features will be made publicly available upon the acceptance of our accompanying research paper. Stay tuned for updates!
 
 ## Main Results
 
@@ -64,9 +60,9 @@ The complete source code and additional features will be made publicly available
 - The value in each cell represents the **Success Rate (%)**.
 - The `-` symbol indicates no information available for those entries.
 
-## Demo Release
+## Rule Learning Demo
 
-The current repository includes a demo that allows users to perform neurosymbolic learning, learning rules in natural language. You can choose to either:
+The rule learning demo allows users to perform neurosymbolic learning, learning rules in natural language. You can choose to either:
 
 1. Use an example subset of trajectories we provide for rule learning.
 2. Collect and use your own trajectories from your environment for rule learning.
@@ -127,3 +123,20 @@ python run_rulelearning.py \
     --buffer /path/to/your_collected_trajectories.json \
     --rule_save_dir /path/to/save/rules.json
 ```
+
+
+## ALFWorld
+
+**Stage 1: NeuroSymbolic Learning** (exploration and knowledge extraction)
+```bash
+bash run_s1.sh
+```
+This stage collects trajectories, learns symbolic knowledge (rules, knowledge graphs, scene graphs), and generates executable code rules.
+
+**Stage 2: MPC** (model-predictive control using learned knowledge)
+```bash
+bash run_s2.sh
+```
+This stage uses the learned symbolic knowledge from Stage 1 to perform MPC-based decision making.
+
+**Note:** Stage 2 should be run after Stage 1 completes, as it relies on the symbolic knowledge learned in Stage 1.
