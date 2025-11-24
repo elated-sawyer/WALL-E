@@ -140,3 +140,8 @@ bash run_s2.sh
 This stage uses the learned symbolic knowledge from Stage 1 to perform MPC-based decision making.
 
 **Note:** Stage 2 should be run after Stage 1 completes, as it relies on the symbolic knowledge learned in Stage 1.
+
+
+## Mars
+
+The backbone API model (GPT-4-32k) utilized in the Mars experiments has been discontinued. We are currently working on optimizing WALL-E's performance with the recommended replacement API model. The updated code will be released soon.
