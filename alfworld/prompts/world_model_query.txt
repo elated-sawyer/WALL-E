@@ -1,0 +1,5 @@
+My information is as follows: 
+initial state：
+{initial_state}
+action:
+{action}

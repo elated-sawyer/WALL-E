@@ -1,0 +1,23 @@
+{
+    "put": [
+        "Rule 1: For action put, if the target location already contains an item, the action will fail; Checking Method: Check if the target location in the initial state has any items listed in items_in_locations.",
+        "Rule 2: For action put, if the item in hand is not suitable for the target location (e.g., a handtowel cannot be put in a cabinet), the action will fail; Checking Method: Check if the item in hand is compatible with the target location based on general knowledge of item types and locations.",
+        "Rule 3: For action put, if the target location is not reachable from the current position, the action will fail; Checking Method: Check if the target location is included in the reachable_locations of the initial state."
+    ],
+    "cool": [
+        "Rule 1: For action cool, if the item is not in hand, the action will fail; Checking Method: Check if 'item_in_hand' is empty or does not contain the specified object.",
+        "Rule 2: For action cool, if the tool is not reachable, the action will fail; Checking Method: Check if 'reachable_locations' does not include the specified tool.",
+        "Rule 3: For action cool, if the tool is not appropriate for cooling, the action will fail; Checking Method: Check if 'tool' is not 'fridge' or a similar cooling device."
+    ],
+    "go to": [
+        "Rule 1: For action go to, if the current position is not adjacent to the target location, the action will fail; Checking Method: Check if the current_position's location_name is connected to the target location in the edges.",
+        "Rule 2: For action go to, if the target location is not reachable, the action will fail; Checking Method: Check if the target location is in the reachable_locations list.",
+        "Rule 3: For action go to, if the target location is occupied by an item that cannot be moved, the action will fail; Checking Method: Check if the items_in_locations at the target location contain items that are not allowed to be moved."
+    ],
+    "take": [
+        "Rule 1: For action take, if the object is not present in the source location, the action will fail; Checking Method: Check if 'obj' is in 'items_in_locations[source]'.",
+        "Rule 2: For action take, if the item in hand is already full, the action will fail; Checking Method: Check if 'item_in_hand' is not None.",
+        "Rule 3: For action take, if the source location is not reachable, the action will fail; Checking Method: Check if 'source' is in 'reachable_locations'.",
+        "Rule 4: For action take, if the source location is closed, the action will fail; Checking Method: Check if 'current_position[status]' is 'open' for the source location."
+    ]
+}

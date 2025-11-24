@@ -1,0 +1,1417 @@
+{
+    "put": [
+        {
+            "initial_state": {
+                "target_item": "handtowel",
+                "reachable_locations": [
+                    "bathtubbasin 1",
+                    "countertop 2",
+                    "countertop 1",
+                    "drawer 8",
+                    "drawer 7",
+                    "drawer 6",
+                    "drawer 5",
+                    "drawer 4",
+                    "drawer 3",
+                    "drawer 2",
+                    "drawer 1",
+                    "garbagecan 1",
+                    "handtowelholder 4",
+                    "handtowelholder 3",
+                    "handtowelholder 2",
+                    "handtowelholder 1",
+                    "sinkbasin 2",
+                    "sinkbasin 1",
+                    "toilet 1",
+                    "toiletpaperhanger 1",
+                    "towelholder 1"
+                ],
+                "items_in_locations": {
+                    "handtowelholder 1": [],
+                    "garbagecan 1": []
+                },
+                "item_in_hand": {
+                    "item_name": "handtowel 2",
+                    "status": "normal"
+                },
+                "current_position": {
+                    "location_name": "garbagecan 1",
+                    "status": "null"
+                }
+            },
+            "action": {
+                "name": "put",
+                "args": {
+                    "obj": "handtowel 2",
+                    "target": "garbagecan 1"
+                }
+            },
+            "action_result": true,
+            "sg_info": {
+                "locations": {
+                    "bathtubbasin 1": [
+                        "Unexplored"
+                    ],
+                    "countertop 2": [
+                        "Unexplored"
+                    ],
+                    "countertop 1": [
+                        "Unexplored"
+                    ],
+                    "drawer 8": [
+                        "Unexplored"
+                    ],
+                    "drawer 7": [
+                        "Unexplored"
+                    ],
+                    "drawer 6": [
+                        "Unexplored"
+                    ],
+                    "drawer 5": [
+                        "Unexplored"
+                    ],
+                    "drawer 4": [
+                        "Unexplored"
+                    ],
+                    "drawer 3": [
+                        "Unexplored"
+                    ],
+                    "drawer 2": [
+                        "Unexplored"
+                    ],
+                    "drawer 1": [
+                        "Unexplored"
+                    ],
+                    "garbagecan 1": [
+                        "No items"
+                    ],
+                    "handtowelholder 4": [
+                        "Unexplored"
+                    ],
+                    "handtowelholder 3": [
+                        "Unexplored"
+                    ],
+                    "handtowelholder 2": [
+                        "Unexplored"
+                    ],
+                    "handtowelholder 1": [
+                        "No items"
+                    ],
+                    "sinkbasin 2": [
+                        "Unexplored"
+                    ],
+                    "sinkbasin 1": [
+                        "Unexplored"
+                    ],
+                    "toilet 1": [
+                        "Unexplored"
+                    ],
+                    "toiletpaperhanger 1": [
+                        "Unexplored"
+                    ],
+                    "towelholder 1": [
+                        "Unexplored"
+                    ]
+                },
+                "items": {
+                    "handtowel 2": "in hand"
+                },
+                "edges": {
+                    "handtowelholder 1": [
+                        "garbagecan 1"
+                    ],
+                    "garbagecan 1": [
+                        "handtowelholder 1"
+                    ]
+                }
+            }
+        },
+        {
+            "initial_state": {
+                "target_item": "mug",
+                "reachable_locations": [
+                    "cabinet 20",
+                    "cabinet 19",
+                    "cabinet 18",
+                    "cabinet 17",
+                    "cabinet 16",
+                    "cabinet 15",
+                    "cabinet 14",
+                    "cabinet 13",
+                    "cabinet 12",
+                    "cabinet 11",
+                    "cabinet 10",
+                    "cabinet 9",
+                    "cabinet 8",
+                    "cabinet 7",
+                    "cabinet 6",
+                    "cabinet 5",
+                    "cabinet 4",
+                    "cabinet 3",
+                    "cabinet 2",
+                    "cabinet 1",
+                    "coffeemachine 1",
+                    "countertop 3",
+                    "countertop 2",
+                    "countertop 1",
+                    "drawer 3",
+                    "drawer 2",
+                    "drawer 1",
+                    "fridge 1",
+                    "garbagecan 1",
+                    "microwave 1",
+                    "sinkbasin 1",
+                    "stoveburner 4",
+                    "stoveburner 3",
+                    "stoveburner 2",
+                    "stoveburner 1",
+                    "toaster 1"
+                ],
+                "items_in_locations": {
+                    "countertop 1": [
+                        "butterknife 2",
+                        "creditcard 1",
+                        "egg 1",
+                        "peppershaker 1",
+                        "pot 1",
+                        "tomato 2",
+                        "tomato 1"
+                    ],
+                    "countertop 2": [
+                        "bread 1",
+                        "creditcard 3",
+                        "fork 2",
+                        "knife 1",
+                        "pan 1",
+                        "pot 2",
+                        "potato 1",
+                        "soapbottle 1",
+                        "spatula 1",
+                        "spoon 1"
+                    ],
+                    "countertop 3": [
+                        "butterknife 1",
+                        "creditcard 2",
+                        "fork 1",
+                        "peppershaker 2",
+                        "saltshaker 1",
+                        "spatula 3"
+                    ],
+                    "coffeemachine 1": [],
+                    "cabinet 1": [],
+                    "cabinet 2": [],
+                    "cabinet 3": [],
+                    "cabinet 4": []
+                },
+                "item_in_hand": {
+                    "item_name": "mug 1",
+                    "status": "cooled"
+                },
+                "current_position": {
+                    "location_name": "cabinet 1",
+                    "status": "null"
+                }
+            },
+            "action": {
+                "name": "put",
+                "args": {
+                    "obj": "mug 1",
+                    "target": "cabinet 1"
+                }
+            },
+            "action_result": true,
+            "sg_info": {
+                "locations": {
+                    "cabinet 20": [
+                        "Unexplored"
+                    ],
+                    "cabinet 19": [
+                        "Unexplored"
+                    ],
+                    "cabinet 18": [
+                        "Unexplored"
+                    ],
+                    "cabinet 17": [
+                        "Unexplored"
+                    ],
+                    "cabinet 16": [
+                        "Unexplored"
+                    ],
+                    "cabinet 15": [
+                        "Unexplored"
+                    ],
+                    "cabinet 14": [
+                        "Unexplored"
+                    ],
+                    "cabinet 13": [
+                        "Unexplored"
+                    ],
+                    "cabinet 12": [
+                        "Unexplored"
+                    ],
+                    "cabinet 11": [
+                        "Unexplored"
+                    ],
+                    "cabinet 10": [
+                        "Unexplored"
+                    ],
+                    "cabinet 9": [
+                        "Unexplored"
+                    ],
+                    "cabinet 8": [
+                        "Unexplored"
+                    ],
+                    "cabinet 7": [
+                        "Unexplored"
+                    ],
+                    "cabinet 6": [
+                        "Unexplored"
+                    ],
+                    "cabinet 5": [
+                        "Unexplored"
+                    ],
+                    "cabinet 4": [
+                        "No items"
+                    ],
+                    "cabinet 3": [
+                        "No items"
+                    ],
+                    "cabinet 2": [
+                        "No items"
+                    ],
+                    "cabinet 1": [
+                        "No items"
+                    ],
+                    "coffeemachine 1": [
+                        "No items"
+                    ],
+                    "countertop 3": [
+                        "butterknife 1",
+                        "creditcard 2",
+                        "fork 1",
+                        "peppershaker 2",
+                        "saltshaker 1",
+                        "spatula 3"
+                    ],
+                    "countertop 2": [
+                        "bread 1",
+                        "creditcard 3",
+                        "fork 2",
+                        "knife 1",
+                        "pan 1",
+                        "pot 2",
+                        "potato 1",
+                        "soapbottle 1",
+                        "spatula 1",
+                        "spoon 1"
+                    ],
+                    "countertop 1": [
+                        "butterknife 2",
+                        "creditcard 1",
+                        "egg 1",
+                        "peppershaker 1",
+                        "pot 1",
+                        "tomato 2",
+                        "tomato 1"
+                    ],
+                    "drawer 3": [
+                        "Unexplored"
+                    ],
+                    "drawer 2": [
+                        "Unexplored"
+                    ],
+                    "drawer 1": [
+                        "Unexplored"
+                    ],
+                    "fridge 1": [
+                        "Unexplored"
+                    ],
+                    "garbagecan 1": [
+                        "Unexplored"
+                    ],
+                    "microwave 1": [
+                        "Unexplored"
+                    ],
+                    "sinkbasin 1": [
+                        "Unexplored"
+                    ],
+                    "stoveburner 4": [
+                        "Unexplored"
+                    ],
+                    "stoveburner 3": [
+                        "Unexplored"
+                    ],
+                    "stoveburner 2": [
+                        "Unexplored"
+                    ],
+                    "stoveburner 1": [
+                        "Unexplored"
+                    ],
+                    "toaster 1": [
+                        "Unexplored"
+                    ]
+                },
+                "items": {
+                    "butterknife 2": "countertop 1",
+                    "creditcard 1": "countertop 1",
+                    "egg 1": "countertop 1",
+                    "peppershaker 1": "countertop 1",
+                    "pot 1": "countertop 1",
+                    "tomato 2": "countertop 1",
+                    "tomato 1": "countertop 1",
+                    "bread 1": "countertop 2",
+                    "creditcard 3": "countertop 2",
+                    "fork 2": "countertop 2",
+                    "knife 1": "countertop 2",
+                    "pan 1": "countertop 2",
+                    "pot 2": "countertop 2",
+                    "potato 1": "countertop 2",
+                    "soapbottle 1": "countertop 2",
+                    "spatula 1": "countertop 2",
+                    "spoon 1": "countertop 2",
+                    "butterknife 1": "countertop 3",
+                    "creditcard 2": "countertop 3",
+                    "fork 1": "countertop 3",
+                    "peppershaker 2": "countertop 3",
+                    "saltshaker 1": "countertop 3",
+                    "spatula 3": "countertop 3",
+                    "mug 1": "in hand"
+                },
+                "edges": {
+                    "countertop 1": [
+                        "countertop 2"
+                    ],
+                    "countertop 2": [
+                        "countertop 1",
+                        "countertop 3"
+                    ],
+                    "countertop 3": [
+                        "countertop 2",
+                        "coffeemachine 1"
+                    ],
+                    "coffeemachine 1": [
+                        "countertop 3",
+                        "cabinet 1"
+                    ],
+                    "cabinet 1": [
+                        "coffeemachine 1",
+                        "cabinet 2",
+                        "fridge 1"
+                    ],
+                    "cabinet 2": [
+                        "cabinet 1",
+                        "cabinet 3"
+                    ],
+                    "cabinet 3": [
+                        "cabinet 2",
+                        "cabinet 4"
+                    ],
+                    "cabinet 4": [
+                        "cabinet 3",
+                        "fridge 1"
+                    ],
+                    "fridge 1": [
+                        "cabinet 4",
+                        "cabinet 1"
+                    ]
+                }
+            }
+        },
+        {
+            "initial_state": {
+                "target_item": "spraybottle",
+                "reachable_locations": [
+                    "cabinet 4",
+                    "cabinet 3",
+                    "cabinet 2",
+                    "cabinet 1",
+                    "countertop 1",
+                    "garbagecan 1",
+                    "handtowelholder 1",
+                    "sinkbasin 2",
+                    "sinkbasin 1",
+                    "toilet 1",
+                    "toiletpaperhanger 1",
+                    "towelholder 1"
+                ],
+                "items_in_locations": {
+                    "cabinet 1": [
+                        "cloth 1",
+                        "soapbar 2",
+                        "soapbottle 1"
+                    ],
+                    "cabinet 2": [
+                        "candle 2"
+                    ],
+                    "cabinet 3": [
+                        "candle 1",
+                        "cloth 2"
+                    ],
+                    "cabinet 4": [],
+                    "countertop 1": [
+                        "handtowel 1"
+                    ],
+                    "garbagecan 1": [
+                        "toiletpaper 1"
+                    ]
+                },
+                "item_in_hand": {
+                    "item_name": "spraybottle 3",
+                    "status": "normal"
+                },
+                "current_position": {
+                    "location_name": "garbagecan 1",
+                    "status": "null"
+                }
+            },
+            "action": {
+                "name": "put",
+                "args": {
+                    "obj": "spraybottle 3",
+                    "target": "garbagecan 1"
+                }
+            },
+            "action_result": true,
+            "sg_info": {
+                "locations": {
+                    "cabinet 4": [
+                        "No items"
+                    ],
+                    "cabinet 3": [
+                        "candle 1",
+                        "cloth 2"
+                    ],
+                    "cabinet 2": [
+                        "candle 2"
+                    ],
+                    "cabinet 1": [
+                        "cloth 1",
+                        "soapbar 2",
+                        "soapbottle 1"
+                    ],
+                    "countertop 1": [
+                        "handtowel 1"
+                    ],
+                    "garbagecan 1": [
+                        "toiletpaper 1"
+                    ],
+                    "handtowelholder 1": [
+                        "Unexplored"
+                    ],
+                    "sinkbasin 2": [
+                        "Unexplored"
+                    ],
+                    "sinkbasin 1": [
+                        "Unexplored"
+                    ],
+                    "toilet 1": [
+                        "Unexplored"
+                    ],
+                    "toiletpaperhanger 1": [
+                        "Unexplored"
+                    ],
+                    "towelholder 1": [
+                        "Unexplored"
+                    ]
+                },
+                "items": {
+                    "cloth 1": "cabinet 1",
+                    "soapbar 2": "cabinet 1",
+                    "soapbottle 1": "cabinet 1",
+                    "candle 2": "cabinet 2",
+                    "candle 1": "cabinet 3",
+                    "cloth 2": "cabinet 3",
+                    "handtowel 1": "countertop 1",
+                    "spraybottle 3": "in hand",
+                    "toiletpaper 1": "garbagecan 1"
+                },
+                "edges": {
+                    "cabinet 1": [
+                        "cabinet 2"
+                    ],
+                    "cabinet 2": [
+                        "cabinet 1",
+                        "cabinet 3"
+                    ],
+                    "cabinet 3": [
+                        "cabinet 2",
+                        "cabinet 4"
+                    ],
+                    "cabinet 4": [
+                        "cabinet 3",
+                        "countertop 1"
+                    ],
+                    "countertop 1": [
+                        "cabinet 4",
+                        "garbagecan 1"
+                    ],
+                    "garbagecan 1": [
+                        "countertop 1"
+                    ]
+                }
+            }
+        }
+    ],
+    "cool": [
+        {
+            "initial_state": {
+                "target_item": "mug",
+                "reachable_locations": [
+                    "cabinet 20",
+                    "cabinet 19",
+                    "cabinet 18",
+                    "cabinet 17",
+                    "cabinet 16",
+                    "cabinet 15",
+                    "cabinet 14",
+                    "cabinet 13",
+                    "cabinet 12",
+                    "cabinet 11",
+                    "cabinet 10",
+                    "cabinet 9",
+                    "cabinet 8",
+                    "cabinet 7",
+                    "cabinet 6",
+                    "cabinet 5",
+                    "cabinet 4",
+                    "cabinet 3",
+                    "cabinet 2",
+                    "cabinet 1",
+                    "coffeemachine 1",
+                    "countertop 3",
+                    "countertop 2",
+                    "countertop 1",
+                    "drawer 3",
+                    "drawer 2",
+                    "drawer 1",
+                    "fridge 1",
+                    "garbagecan 1",
+                    "microwave 1",
+                    "sinkbasin 1",
+                    "stoveburner 4",
+                    "stoveburner 3",
+                    "stoveburner 2",
+                    "stoveburner 1",
+                    "toaster 1"
+                ],
+                "items_in_locations": {
+                    "countertop 1": [
+                        "butterknife 2",
+                        "creditcard 1",
+                        "egg 1",
+                        "peppershaker 1",
+                        "pot 1",
+                        "tomato 2",
+                        "tomato 1"
+                    ],
+                    "countertop 2": [
+                        "bread 1",
+                        "creditcard 3",
+                        "fork 2",
+                        "knife 1",
+                        "pan 1",
+                        "pot 2",
+                        "potato 1",
+                        "soapbottle 1",
+                        "spatula 1",
+                        "spoon 1"
+                    ],
+                    "countertop 3": [
+                        "butterknife 1",
+                        "creditcard 2",
+                        "fork 1",
+                        "peppershaker 2",
+                        "saltshaker 1",
+                        "spatula 3"
+                    ],
+                    "coffeemachine 1": [],
+                    "cabinet 1": [],
+                    "cabinet 2": [],
+                    "cabinet 3": [],
+                    "cabinet 4": []
+                },
+                "item_in_hand": {
+                    "item_name": "mug 1",
+                    "status": "normal"
+                },
+                "current_position": {
+                    "location_name": "fridge 1",
+                    "status": "closed"
+                }
+            },
+            "action": {
+                "name": "cool",
+                "args": {
+                    "obj": "mug 1",
+                    "tool": "fridge 1"
+                }
+            },
+            "action_result": true,
+            "sg_info": {
+                "locations": {
+                    "cabinet 20": [
+                        "Unexplored"
+                    ],
+                    "cabinet 19": [
+                        "Unexplored"
+                    ],
+                    "cabinet 18": [
+                        "Unexplored"
+                    ],
+                    "cabinet 17": [
+                        "Unexplored"
+                    ],
+                    "cabinet 16": [
+                        "Unexplored"
+                    ],
+                    "cabinet 15": [
+                        "Unexplored"
+                    ],
+                    "cabinet 14": [
+                        "Unexplored"
+                    ],
+                    "cabinet 13": [
+                        "Unexplored"
+                    ],
+                    "cabinet 12": [
+                        "Unexplored"
+                    ],
+                    "cabinet 11": [
+                        "Unexplored"
+                    ],
+                    "cabinet 10": [
+                        "Unexplored"
+                    ],
+                    "cabinet 9": [
+                        "Unexplored"
+                    ],
+                    "cabinet 8": [
+                        "Unexplored"
+                    ],
+                    "cabinet 7": [
+                        "Unexplored"
+                    ],
+                    "cabinet 6": [
+                        "Unexplored"
+                    ],
+                    "cabinet 5": [
+                        "Unexplored"
+                    ],
+                    "cabinet 4": [
+                        "No items"
+                    ],
+                    "cabinet 3": [
+                        "No items"
+                    ],
+                    "cabinet 2": [
+                        "No items"
+                    ],
+                    "cabinet 1": [
+                        "No items"
+                    ],
+                    "coffeemachine 1": [
+                        "No items"
+                    ],
+                    "countertop 3": [
+                        "butterknife 1",
+                        "creditcard 2",
+                        "fork 1",
+                        "peppershaker 2",
+                        "saltshaker 1",
+                        "spatula 3"
+                    ],
+                    "countertop 2": [
+                        "bread 1",
+                        "creditcard 3",
+                        "fork 2",
+                        "knife 1",
+                        "pan 1",
+                        "pot 2",
+                        "potato 1",
+                        "soapbottle 1",
+                        "spatula 1",
+                        "spoon 1"
+                    ],
+                    "countertop 1": [
+                        "butterknife 2",
+                        "creditcard 1",
+                        "egg 1",
+                        "peppershaker 1",
+                        "pot 1",
+                        "tomato 2",
+                        "tomato 1"
+                    ],
+                    "drawer 3": [
+                        "Unexplored"
+                    ],
+                    "drawer 2": [
+                        "Unexplored"
+                    ],
+                    "drawer 1": [
+                        "Unexplored"
+                    ],
+                    "fridge 1": [
+                        "Unexplored"
+                    ],
+                    "garbagecan 1": [
+                        "Unexplored"
+                    ],
+                    "microwave 1": [
+                        "Unexplored"
+                    ],
+                    "sinkbasin 1": [
+                        "Unexplored"
+                    ],
+                    "stoveburner 4": [
+                        "Unexplored"
+                    ],
+                    "stoveburner 3": [
+                        "Unexplored"
+                    ],
+                    "stoveburner 2": [
+                        "Unexplored"
+                    ],
+                    "stoveburner 1": [
+                        "Unexplored"
+                    ],
+                    "toaster 1": [
+                        "Unexplored"
+                    ]
+                },
+                "items": {
+                    "butterknife 2": "countertop 1",
+                    "creditcard 1": "countertop 1",
+                    "egg 1": "countertop 1",
+                    "peppershaker 1": "countertop 1",
+                    "pot 1": "countertop 1",
+                    "tomato 2": "countertop 1",
+                    "tomato 1": "countertop 1",
+                    "bread 1": "countertop 2",
+                    "creditcard 3": "countertop 2",
+                    "fork 2": "countertop 2",
+                    "knife 1": "countertop 2",
+                    "pan 1": "countertop 2",
+                    "pot 2": "countertop 2",
+                    "potato 1": "countertop 2",
+                    "soapbottle 1": "countertop 2",
+                    "spatula 1": "countertop 2",
+                    "spoon 1": "countertop 2",
+                    "butterknife 1": "countertop 3",
+                    "creditcard 2": "countertop 3",
+                    "fork 1": "countertop 3",
+                    "peppershaker 2": "countertop 3",
+                    "saltshaker 1": "countertop 3",
+                    "spatula 3": "countertop 3",
+                    "mug 1": "in hand"
+                },
+                "edges": {
+                    "countertop 1": [
+                        "countertop 2"
+                    ],
+                    "countertop 2": [
+                        "countertop 1",
+                        "countertop 3"
+                    ],
+                    "countertop 3": [
+                        "countertop 2",
+                        "coffeemachine 1"
+                    ],
+                    "coffeemachine 1": [
+                        "countertop 3",
+                        "cabinet 1"
+                    ],
+                    "cabinet 1": [
+                        "coffeemachine 1",
+                        "cabinet 2"
+                    ],
+                    "cabinet 2": [
+                        "cabinet 1",
+                        "cabinet 3"
+                    ],
+                    "cabinet 3": [
+                        "cabinet 2",
+                        "cabinet 4"
+                    ],
+                    "cabinet 4": [
+                        "cabinet 3",
+                        "fridge 1"
+                    ],
+                    "fridge 1": [
+                        "cabinet 4"
+                    ]
+                }
+            }
+        },
+        {
+            "initial_state": {
+                "target_item": "tomato",
+                "reachable_locations": [
+                    "cabinet 12",
+                    "cabinet 11",
+                    "cabinet 10",
+                    "cabinet 9",
+                    "cabinet 8",
+                    "cabinet 7",
+                    "cabinet 6",
+                    "cabinet 5",
+                    "cabinet 4",
+                    "cabinet 3",
+                    "cabinet 2",
+                    "cabinet 1",
+                    "coffeemachine 1",
+                    "countertop 2",
+                    "countertop 1",
+                    "diningtable 1",
+                    "drawer 3",
+                    "drawer 2",
+                    "drawer 1",
+                    "fridge 1",
+                    "garbagecan 1",
+                    "microwave 1",
+                    "sinkbasin 1",
+                    "stoveburner 4",
+                    "stoveburner 3",
+                    "stoveburner 2",
+                    "stoveburner 1",
+                    "toaster 1"
+                ],
+                "items_in_locations": {
+                    "fridge 1": [
+                        "bowl 1",
+                        "cup 2",
+                        "cup 1",
+                        "egg 2",
+                        "egg 1",
+                        "lettuce 2",
+                        "lettuce 1",
+                        "potato 1",
+                        "bowl 1",
+                        "cup 2",
+                        "cup 1",
+                        "egg 2",
+                        "egg 1",
+                        "lettuce 2",
+                        "lettuce 1",
+                        "potato 1"
+                    ],
+                    "countertop 1": [
+                        "apple 2",
+                        "apple 1",
+                        "butterknife 1",
+                        "pan 1",
+                        "winebottle 1"
+                    ],
+                    "countertop 2": [
+                        "cup 3",
+                        "ladle 3",
+                        "lettuce 3",
+                        "mug 1",
+                        "pot 2",
+                        "saltshaker 1",
+                        "spoon 1"
+                    ]
+                },
+                "item_in_hand": {
+                    "item_name": "tomato 1",
+                    "status": "normal"
+                },
+                "current_position": {
+                    "location_name": "fridge 1",
+                    "status": "null"
+                }
+            },
+            "action": {
+                "name": "cool",
+                "args": {
+                    "obj": "tomato 1",
+                    "tool": "fridge 1"
+                }
+            },
+            "action_result": true,
+            "sg_info": {
+                "locations": {
+                    "cabinet 12": [
+                        "Unexplored"
+                    ],
+                    "cabinet 11": [
+                        "Unexplored"
+                    ],
+                    "cabinet 10": [
+                        "Unexplored"
+                    ],
+                    "cabinet 9": [
+                        "Unexplored"
+                    ],
+                    "cabinet 8": [
+                        "Unexplored"
+                    ],
+                    "cabinet 7": [
+                        "Unexplored"
+                    ],
+                    "cabinet 6": [
+                        "Unexplored"
+                    ],
+                    "cabinet 5": [
+                        "Unexplored"
+                    ],
+                    "cabinet 4": [
+                        "Unexplored"
+                    ],
+                    "cabinet 3": [
+                        "Unexplored"
+                    ],
+                    "cabinet 2": [
+                        "Unexplored"
+                    ],
+                    "cabinet 1": [
+                        "Unexplored"
+                    ],
+                    "coffeemachine 1": [
+                        "Unexplored"
+                    ],
+                    "countertop 2": [
+                        "cup 3",
+                        "ladle 3",
+                        "lettuce 3",
+                        "mug 1",
+                        "pot 2",
+                        "saltshaker 1",
+                        "spoon 1"
+                    ],
+                    "countertop 1": [
+                        "apple 2",
+                        "apple 1",
+                        "butterknife 1",
+                        "pan 1",
+                        "winebottle 1"
+                    ],
+                    "diningtable 1": [
+                        "Unexplored"
+                    ],
+                    "drawer 3": [
+                        "Unexplored"
+                    ],
+                    "drawer 2": [
+                        "Unexplored"
+                    ],
+                    "drawer 1": [
+                        "Unexplored"
+                    ],
+                    "fridge 1": [
+                        "bowl 1",
+                        "cup 2",
+                        "cup 1",
+                        "egg 2",
+                        "egg 1",
+                        "lettuce 2",
+                        "lettuce 1",
+                        "potato 1"
+                    ],
+                    "garbagecan 1": [
+                        "Unexplored"
+                    ],
+                    "microwave 1": [
+                        "Unexplored"
+                    ],
+                    "sinkbasin 1": [
+                        "Unexplored"
+                    ],
+                    "stoveburner 4": [
+                        "Unexplored"
+                    ],
+                    "stoveburner 3": [
+                        "Unexplored"
+                    ],
+                    "stoveburner 2": [
+                        "Unexplored"
+                    ],
+                    "stoveburner 1": [
+                        "Unexplored"
+                    ],
+                    "toaster 1": [
+                        "Unexplored"
+                    ]
+                },
+                "items": {
+                    "bowl 1": "fridge 1",
+                    "cup 2": "fridge 1",
+                    "cup 1": "fridge 1",
+                    "egg 2": "fridge 1",
+                    "egg 1": "fridge 1",
+                    "lettuce 2": "fridge 1",
+                    "lettuce 1": "fridge 1",
+                    "potato 1": "fridge 1",
+                    "apple 2": "countertop 1",
+                    "apple 1": "countertop 1",
+                    "butterknife 1": "countertop 1",
+                    "pan 1": "countertop 1",
+                    "winebottle 1": "countertop 1",
+                    "cup 3": "countertop 2",
+                    "ladle 3": "countertop 2",
+                    "lettuce 3": "countertop 2",
+                    "mug 1": "countertop 2",
+                    "pot 2": "countertop 2",
+                    "saltshaker 1": "countertop 2",
+                    "spoon 1": "countertop 2",
+                    "tomato 1": "in hand"
+                },
+                "edges": {
+                    "fridge 1": [
+                        "countertop 1",
+                        "countertop 2"
+                    ],
+                    "countertop 1": [
+                        "fridge 1",
+                        "countertop 2"
+                    ],
+                    "countertop 2": [
+                        "countertop 1",
+                        "fridge 1"
+                    ]
+                }
+            }
+        }
+    ],
+    "go to": [
+        {
+            "initial_state": {
+                "target_item": "spraybottle",
+                "reachable_locations": [
+                    "cabinet 4",
+                    "cabinet 3",
+                    "cabinet 2",
+                    "cabinet 1",
+                    "countertop 1",
+                    "garbagecan 1",
+                    "handtowelholder 1",
+                    "sinkbasin 2",
+                    "sinkbasin 1",
+                    "toilet 1",
+                    "toiletpaperhanger 1",
+                    "towelholder 1"
+                ],
+                "items_in_locations": {
+                    "cabinet 1": [
+                        "cloth 1",
+                        "soapbar 2",
+                        "soapbottle 1"
+                    ],
+                    "cabinet 2": [
+                        "candle 2"
+                    ],
+                    "cabinet 3": [
+                        "candle 1",
+                        "cloth 2"
+                    ],
+                    "cabinet 4": [],
+                    "countertop 1": [
+                        "handtowel 1"
+                    ],
+                    "garbagecan 1": [
+                        "toiletpaper 1",
+                        "spraybottle 3",
+                        "toiletpaper 1"
+                    ],
+                    "sinkbasin 1": [],
+                    "sinkbasin 2": [],
+                    "handtowelholder 1": [
+                        "handtowel 1"
+                    ]
+                },
+                "item_in_hand": {
+                    "item_name": "spraybottle 3",
+                    "status": "normal"
+                },
+                "current_position": {
+                    "location_name": "handtowelholder 1",
+                    "status": "null"
+                }
+            },
+            "action": {
+                "name": "go to",
+                "args": {
+                    "target": "towelholder 1"
+                }
+            },
+            "action_result": true,
+            "sg_info": {
+                "locations": {
+                    "cabinet 4": [
+                        "No items"
+                    ],
+                    "cabinet 3": [
+                        "candle 1",
+                        "cloth 2"
+                    ],
+                    "cabinet 2": [
+                        "candle 2"
+                    ],
+                    "cabinet 1": [
+                        "cloth 1",
+                        "soapbar 2",
+                        "soapbottle 1"
+                    ],
+                    "countertop 1": [
+                        "handtowel 1"
+                    ],
+                    "garbagecan 1": [
+                        "toiletpaper 1"
+                    ],
+                    "handtowelholder 1": [
+                        "No items"
+                    ],
+                    "sinkbasin 2": [
+                        "No items"
+                    ],
+                    "sinkbasin 1": [
+                        "No items"
+                    ],
+                    "toilet 1": [
+                        "Unexplored"
+                    ],
+                    "toiletpaperhanger 1": [
+                        "Unexplored"
+                    ],
+                    "towelholder 1": [
+                        "Unexplored"
+                    ]
+                },
+                "items": {
+                    "cloth 1": "cabinet 1",
+                    "soapbar 2": "cabinet 1",
+                    "soapbottle 1": "cabinet 1",
+                    "candle 2": "cabinet 2",
+                    "candle 1": "cabinet 3",
+                    "cloth 2": "cabinet 3",
+                    "handtowel 1": "countertop 1",
+                    "spraybottle 3": "in hand",
+                    "toiletpaper 1": "garbagecan 1"
+                },
+                "edges": {
+                    "cabinet 1": [
+                        "cabinet 2"
+                    ],
+                    "cabinet 2": [
+                        "cabinet 1",
+                        "cabinet 3"
+                    ],
+                    "cabinet 3": [
+                        "cabinet 2",
+                        "cabinet 4"
+                    ],
+                    "cabinet 4": [
+                        "cabinet 3",
+                        "countertop 1"
+                    ],
+                    "countertop 1": [
+                        "cabinet 4",
+                        "garbagecan 1"
+                    ],
+                    "garbagecan 1": [
+                        "countertop 1",
+                        "sinkbasin 1",
+                        "sinkbasin 2",
+                        "garbagecan 1",
+                        "handtowelholder 1"
+                    ],
+                    "sinkbasin 1": [
+                        "garbagecan 1",
+                        "sinkbasin 2"
+                    ],
+                    "sinkbasin 2": [
+                        "sinkbasin 1",
+                        "garbagecan 1"
+                    ],
+                    "handtowelholder 1": [
+                        "garbagecan 1"
+                    ]
+                }
+            }
+        }
+    ],
+    "take": [
+        {
+            "initial_state": {
+                "target_item": "spraybottle",
+                "reachable_locations": [
+                    "cabinet 4",
+                    "cabinet 3",
+                    "cabinet 2",
+                    "cabinet 1",
+                    "countertop 1",
+                    "garbagecan 1",
+                    "handtowelholder 1",
+                    "sinkbasin 2",
+                    "sinkbasin 1",
+                    "toilet 1",
+                    "toiletpaperhanger 1",
+                    "towelholder 1"
+                ],
+                "items_in_locations": {
+                    "cabinet 1": [
+                        "cloth 1",
+                        "soapbar 2",
+                        "soapbottle 1"
+                    ],
+                    "cabinet 2": [
+                        "candle 2"
+                    ],
+                    "cabinet 3": [
+                        "candle 1",
+                        "cloth 2"
+                    ],
+                    "cabinet 4": [],
+                    "countertop 1": [
+                        "handtowel 1"
+                    ],
+                    "garbagecan 1": [
+                        "toiletpaper 1",
+                        "spraybottle 3",
+                        "toiletpaper 1",
+                        "toiletpaper 1"
+                    ],
+                    "sinkbasin 1": [],
+                    "sinkbasin 2": [],
+                    "handtowelholder 1": [
+                        "handtowel 1"
+                    ],
+                    "towelholder 1": [
+                        "towel 1"
+                    ],
+                    "toilet 1": [
+                        "soapbar 3",
+                        "soapbar 1",
+                        "spraybottle 2",
+                        "spraybottle 1"
+                    ]
+                },
+                "item_in_hand": {
+                    "item_name": "spraybottle 3",
+                    "status": "normal"
+                },
+                "current_position": {
+                    "location_name": "toilet 1",
+                    "status": "null"
+                }
+            },
+            "action": {
+                "name": "take",
+                "args": {
+                    "obj": "spraybottle 2",
+                    "source": "toilet 1"
+                }
+            },
+            "action_result": false,
+            "sg_info": {
+                "locations": {
+                    "cabinet 4": [
+                        "No items"
+                    ],
+                    "cabinet 3": [
+                        "candle 1",
+                        "cloth 2"
+                    ],
+                    "cabinet 2": [
+                        "candle 2"
+                    ],
+                    "cabinet 1": [
+                        "cloth 1",
+                        "soapbar 2",
+                        "soapbottle 1"
+                    ],
+                    "countertop 1": [
+                        "handtowel 1"
+                    ],
+                    "garbagecan 1": [
+                        "toiletpaper 1"
+                    ],
+                    "handtowelholder 1": [
+                        "No items"
+                    ],
+                    "sinkbasin 2": [
+                        "No items"
+                    ],
+                    "sinkbasin 1": [
+                        "No items"
+                    ],
+                    "toilet 1": [
+                        "soapbar 3",
+                        "soapbar 1",
+                        "spraybottle 2"
+                    ],
+                    "toiletpaperhanger 1": [
+                        "Unexplored"
+                    ],
+                    "towelholder 1": [
+                        "towel 1"
+                    ]
+                },
+                "items": {
+                    "cloth 1": "cabinet 1",
+                    "soapbar 2": "cabinet 1",
+                    "soapbottle 1": "cabinet 1",
+                    "candle 2": "cabinet 2",
+                    "candle 1": "cabinet 3",
+                    "cloth 2": "cabinet 3",
+                    "handtowel 1": "countertop 1",
+                    "spraybottle 3": "in hand",
+                    "toiletpaper 1": "garbagecan 1",
+                    "towel 1": "towelholder 1",
+                    "soapbar 3": "toilet 1",
+                    "soapbar 1": "toilet 1",
+                    "spraybottle 2": "toilet 1",
+                    "spraybottle 1": "in hand"
+                },
+                "edges": {
+                    "cabinet 1": [
+                        "cabinet 2"
+                    ],
+                    "cabinet 2": [
+                        "cabinet 1",
+                        "cabinet 3"
+                    ],
+                    "cabinet 3": [
+                        "cabinet 2",
+                        "cabinet 4"
+                    ],
+                    "cabinet 4": [
+                        "cabinet 3",
+                        "countertop 1"
+                    ],
+                    "countertop 1": [
+                        "cabinet 4",
+                        "garbagecan 1"
+                    ],
+                    "garbagecan 1": [
+                        "countertop 1",
+                        "sinkbasin 1",
+                        "sinkbasin 2",
+                        "garbagecan 1",
+                        "handtowelholder 1",
+                        "towelholder 1",
+                        "toilet 1"
+                    ],
+                    "sinkbasin 1": [
+                        "garbagecan 1",
+                        "sinkbasin 2"
+                    ],
+                    "sinkbasin 2": [
+                        "sinkbasin 1",
+                        "garbagecan 1"
+                    ],
+                    "handtowelholder 1": [
+                        "garbagecan 1",
+                        "towelholder 1"
+                    ],
+                    "towelholder 1": [
+                        "handtowelholder 1",
+                        "garbagecan 1"
+                    ],
+                    "toilet 1": [
+                        "garbagecan 1"
+                    ]
+                }
+            }
+        }
+    ]
+}

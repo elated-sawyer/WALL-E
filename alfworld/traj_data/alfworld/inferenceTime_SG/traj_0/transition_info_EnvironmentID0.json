@@ -1,0 +1,121 @@
+{
+    "graph": {
+        "locations": {
+            "cabinet 6": [
+                "Unexplored"
+            ],
+            "cabinet 5": [
+                "Unexplored"
+            ],
+            "cabinet 4": [
+                "Unexplored"
+            ],
+            "cabinet 3": [
+                "Unexplored"
+            ],
+            "cabinet 2": [
+                "Unexplored"
+            ],
+            "cabinet 1": [
+                "Unexplored"
+            ],
+            "coffeemachine 1": [
+                "Unexplored"
+            ],
+            "countertop 3": [
+                "Unexplored"
+            ],
+            "countertop 2": [
+                "Unexplored"
+            ],
+            "countertop 1": [
+                "apple 1",
+                "cellphone 1",
+                "cup 2",
+                "glassbottle 2",
+                "spatula 1"
+            ],
+            "drawer 3": [
+                "Unexplored"
+            ],
+            "drawer 2": [
+                "Unexplored"
+            ],
+            "drawer 1": [
+                "Unexplored"
+            ],
+            "fridge 1": [
+                "Unexplored"
+            ],
+            "garbagecan 1": [
+                "Unexplored"
+            ],
+            "microwave 1": [
+                "Unexplored"
+            ],
+            "shelf 3": [
+                "Unexplored"
+            ],
+            "shelf 2": [
+                "Unexplored"
+            ],
+            "shelf 1": [
+                "Unexplored"
+            ],
+            "sinkbasin 1": [
+                "Unexplored"
+            ],
+            "stoveburner 4": [
+                "Unexplored"
+            ],
+            "stoveburner 3": [
+                "Unexplored"
+            ],
+            "stoveburner 2": [
+                "Unexplored"
+            ],
+            "stoveburner 1": [
+                "Unexplored"
+            ],
+            "toaster 1": [
+                "Unexplored"
+            ]
+        },
+        "items": {
+            "apple 1": "countertop 1",
+            "cellphone 1": "countertop 1",
+            "cup 2": "countertop 1",
+            "glassbottle 2": "countertop 1",
+            "lettuce 1": "in hand",
+            "spatula 1": "countertop 1"
+        },
+        "edges": {
+            "countertop 1": [
+                "fridge 1"
+            ],
+            "fridge 1": [
+                "countertop 1"
+            ]
+        }
+    },
+    "initial_state": {
+        "locations": {
+            "countertop 1": [
+                "apple 1",
+                "cellphone 1",
+                "cup 2",
+                "glassbottle 2",
+                "lettuce 1",
+                "spatula 1"
+            ]
+        },
+        "items": {
+            "apple 1": "countertop 1",
+            "cellphone 1": "countertop 1",
+            "cup 2": "countertop 1",
+            "glassbottle 2": "countertop 1",
+            "lettuce 1": "countertop 1",
+            "spatula 1": "countertop 1"
+        }
+    }
+}

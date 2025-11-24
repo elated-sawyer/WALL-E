@@ -1,0 +1,286 @@
+Using your knowledge of Python programming, please implement the given rule as a Python function. 
+
+The function should be defined as follows:
+
+```python
+def expected_rule_code(state, action, scene_graph):
+    # Your code here
+    return feedback, success, suggestion
+where
+feedback: a string, give the action feedback based on success or not.
+success: a bool, whether the action is executed successfully, give 'True' or 'False'. If the action type is not the action type in the rule, count as success (e.g., success = True).
+suggestion: a string, if the 'action' fails, 'suggestion' would be given based on 'rule', 'state' and 'action'.
+
+Here are examples of the state and action format:
+
+state:
+{
+    "target_item": "mug", 
+    "reachable_locations": [
+        "cabinet 13",
+        "cabinet 12",
+        "cabinet 11",
+        "cabinet 10",
+        "cabinet 9",
+        "cabinet 8",
+        "cabinet 7",
+        "cabinet 6",
+        "cabinet 5",
+        "cabinet 4",
+        "cabinet 3",
+        "cabinet 2",
+        "cabinet 1",
+        "coffeemachine 1",
+        "countertop 2",
+        "countertop 1",
+        "diningtable 1",
+        "drawer 4",
+        "drawer 3",
+        "drawer 2",
+        "drawer 1",
+        "fridge 1",
+        "garbagecan 1",
+        "microwave 1",
+        "shelf 3",
+        "shelf 2",
+        "shelf 1",
+        "sinkbasin 1",
+        "stoveburner 4",
+        "stoveburner 3",
+        "stoveburner 2",
+        "stoveburner 1",
+        "toaster 1"
+    ],
+    "items_in_locations": {
+        "fridge 1": [
+            "lettuce 2",
+            "mug 2",
+            "potato 3"
+        ],
+        "microwave 1": []
+    },
+    "item_in_hand": {
+        "item_name": "cup 1",
+        "status": "normal"
+    },
+    "current_position": {
+        "location_name": "microwave 1",
+        "status": "open"
+    }
+}
+
+action:
+{
+    "name": "go_to",
+    "args": {
+        "target": target
+    }
+},
+{
+    "name": "open",
+    "args": {
+        "target": target
+    }
+},
+{
+    "name": "close",
+    "args": {
+        "target": target
+    }
+},
+{
+    "name": "take",
+    "args": {
+        "obj": obj,
+        "source": source
+    }
+},
+{
+    "name": "put",
+    "args": {
+        "obj": obj,
+        "target": target
+    }
+},
+{
+    "name": "clean",
+    "args": {
+        "obj": obj,
+        "tool": tool
+    }
+},
+{
+    "name": "heat",
+    "args": {
+        "obj": obj,
+        "tool": tool
+    }
+},
+{
+    "name": "cool",
+    "args": {
+        "obj": obj,
+        "tool": tool
+    }
+},
+{
+    "name": "use",
+    "args": {
+        "obj": obj
+    }
+}
+
+Ensure that the function handles the input and outputs the expected result based on Alfworld mechanics and the provided state and action.
+
+
+If the rule involves the need to use your knowledge to make a judgement about an item or action then write the function, LLM_request("question"). 
+LLM_request would send the "question" to gpt4, and return the gpt4's response. you just need to write the "question" in the LLM_request. 
+LLM_request("question"+"response format") has already been predefined, you can just use it dirtectly. Do not need to define it again in your response. But you need to define the "question" and "response format" carefully.
+
+example: i want to know if the item can be destroyed
+the LLM function: LLM_request(f"if the {item} can be destroyed in the Alfworld?" + "only reply True or False")
+
+
+Scene Graph Example:
+{
+    "graph": {
+        "locations": {
+            "cabinet 6": [
+                "Unexplored"
+            ],
+            "cabinet 5": [
+                "Unexplored"
+            ],
+            "cabinet 4": [
+                "Unexplored"
+            ],
+            "cabinet 3": [
+                "Unexplored"
+            ],
+            "cabinet 2": [
+                "Unexplored"
+            ],
+            "cabinet 1": [
+                "Unexplored"
+            ],
+            "coffeemachine 1": [
+                "Unexplored"
+            ],
+            "countertop 3": [
+                "butterknife 3",
+                "cellphone 1",
+                "fork 1",
+                "houseplant 1",
+                "knife 2",
+                "knife 1",
+                "lettuce 2",
+                "pot 2",
+                "statue 2",
+                "statue 1"
+            ],
+            "countertop 2": [
+                "apple 1",
+                "bread 2",
+                "bread 1",
+                "butterknife 2",
+                "butterknife 1",
+                "glassbottle 2",
+                "papertowelroll 1",
+                "potato 1",
+                "soapbottle 1"
+            ],
+            "countertop 1": [
+                "egg 1",
+                "potato 3"
+            ],
+            "drawer 3": [
+                "No items"
+            ],
+            "drawer 2": [
+                "saltshaker 1"
+            ],
+            "drawer 1": [
+                "creditcard 1",
+                "spatula 1"
+            ],
+            "fridge 1": [
+                "Unexplored"
+            ],
+            "garbagecan 1": [
+                "Unexplored"
+            ],
+            "microwave 1": [
+                "Unexplored"
+            ],
+            "shelf 3": [
+                "Unexplored"
+            ],
+            "shelf 2": [
+                "Unexplored"
+            ],
+            "shelf 1": [
+                "saltshaker 2"
+            ],
+            "sinkbasin 1": [
+                "Unexplored"
+            ],
+            "stoveburner 4": [
+                "Unexplored"
+            ],
+            "stoveburner 3": [
+                "Unexplored"
+            ],
+            "stoveburner 2": [
+                "Unexplored"
+            ],
+            "stoveburner 1": [
+                "Unexplored"
+            ],
+            "toaster 1": [
+                "Unexplored"
+            ]
+        }
+        "edges": {
+            "drawer 1": [
+                "drawer 2",
+                "countertop 3",
+                "shelf 1"
+            ],
+            "drawer 2": [
+                "drawer 1",
+                "drawer 3"
+            ],
+            "drawer 3": [
+                "drawer 2",
+                "countertop 1"
+            ],
+            "countertop 1": [
+                "drawer 3",
+                "countertop 2"
+            ],
+            "countertop 2": [
+                "countertop 1",
+                "countertop 3"
+            ],
+            "countertop 3": [
+                "countertop 2",
+                "drawer 1"
+            ],
+            "shelf 1": [
+                "drawer 1"
+            ]
+        }
+    }
+}
+
+For example:
+    "please go to the position ... that has 'target_item' or the position is 'Unexplored' to find the 'target_item'.",
+    ...
+Be sure to include such details to make the suggestions more engaging and relevant.
+
+You should only respond in the format as described below, and do not give example usage or anything else:
+RESPONSE FORMAT:
+def expected_rule_code(state, action, scene_graph):
+    # Your code here
+
+
