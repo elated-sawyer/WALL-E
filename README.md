@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assests/WALL-E logo.png" alt="WALL-E" width="280"/>
+
 # WALL-E: World Alignment by NeuroSymbolic Learning improves World Model-based LLM Agents
 
 [**arXiv**](https://arxiv.org/abs/2504.15785) • 
