@@ -1,11 +1,36 @@
+<div align="center">
 # WALL-E: World Alignment by NeuroSymbolic Learning improves World Model-based LLM Agents
 
-[[arXiv](https://arxiv.org/abs/2504.15785)]
+[**arXiv**](https://arxiv.org/abs/2504.15785) • 
+[**huggingface**](https://huggingface.co/papers/2504.15785) • [**code**](https://github.com/elated-sawyer/WALL-E)
+
+</div>
+
 
 
 ![teaser](./assests/teaser_figure.png)
 
 > WALL-E mining a diamond in Mars. Step 1-2: the agent makes decision via MPC with the initial unaligned world model, resulting in a failed action for mining iron. Step 3: leveraging previous trajectories and world model predictions, WALL-E learns symbolic knowledge, including rules, knowledge graphs, and scene graphs. Step 4-5: the learned symbolic knowledge helps the world model make accurate predictions and correct the previous mistake. Step 6-7: the agent adjusts its decision accordingly and replaces stone pickaxe with iron pickaxe toward completing the task.
+
+
+
+
+## Table of Contents
+
+- [Abstract](#abstract)
+- [Main Results](#main-results)
+  <!-- - [Mars](#mars)
+  - [ALFWorld](#alfworld) -->
+- [Rule Learning Demo](#rule-learning-demo)
+  <!-- - [Setup](#setup)
+  - [Running Rule Learning](#running-rule-learning)
+    - [Option 1: Use Provided Trajectories](#option-1-use-provided-trajectories)
+    - [Option 2: Collect Your Own Trajectories](#option-2-collect-your-own-trajectories) -->
+- [ALFWorld](#alfworld-1)
+- [Mars](#mars-1)
+- [Citation](#citation)
+
+
 
 
 
@@ -145,3 +170,17 @@ This stage uses the learned symbolic knowledge from Stage 1 to perform MPC-based
 ## Mars
 
 The backbone API model (GPT-4-32k) utilized in the Mars experiments has been discontinued. We are currently working on optimizing WALL-E's performance with the recommended replacement API model. The updated code will be released soon.
+
+
+## Citation
+
+If you find our work useful, please cite:
+
+```bibtex
+@article{zhou2025wall,
+  title={WALL-E 2.0: World Alignment by NeuroSymbolic Learning improves World Model-based LLM Agents},
+  author={Zhou, Siyu and Zhou, Tianyi and Yang, Yijun and Long, Guodong and Ye, Deheng and Jiang, Jing and Zhang, Chengqi},
+  journal={arXiv preprint arXiv:2504.15785},
+  year={2025}
+}
+```
