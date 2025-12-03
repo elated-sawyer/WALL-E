@@ -187,7 +187,7 @@ python baselines/walle/s2_run.py  --load_world final_world/default --episode 5
 **Note:** Stage 2 should be run after Stage 1 completes, as it relies on the symbolic knowledge learned in Stage 1.
 
 
-The backbone API model (GPT-4-32k) employed in the Mars experiments is no longer available. In response, we are optimizing WALL-E’s knowledge-graph extraction pipeline using a program-learning approach for scene-graph induction. Updated code and models will be released in an upcoming version. Updated code and models will be released in an upcoming version.
+The backbone API model (GPT-4-32k) employed in the Mars experiments is no longer available. In response, we are optimizing WALL-E’s knowledge-graph extraction pipeline using a program-learning approach for scene-graph induction. Updated code will be released in an upcoming version.
 
 
 ## Citation
