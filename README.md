@@ -174,13 +174,13 @@ bash run_s2.sh
 
 **Stage 1: NeuroSymbolic Learning** (exploration and knowledge extraction)
 ```bash
-python baselines/induction_from_reflexion_std/s1_run.py  --load_world final_world/default --episode 5
+python baselines/walle/s1_run.py  --load_world final_world/default --episode 5
 ```
 <!-- This stage collects trajectories, learns symbolic knowledge (rules, knowledge graphs, scene graphs), and generates executable code rules. -->
 
 **Stage 2: MPC** (model-predictive control using learned knowledge)
 ```bash
-python baselines/induction_from_reflexion_std/s2_run.py  --load_world final_world/default --episode 5
+python baselines/walle/s2_run.py  --load_world final_world/default --episode 5
 ```
 <!-- This stage uses the learned symbolic knowledge from Stage 1 to perform MPC-based decision making. -->
 
