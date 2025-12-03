@@ -1,0 +1,143 @@
+{
+    "sapling": {
+        "name": "sapling",
+        "quantity": 1,
+        "action": "do",
+        "collecting_resource": [
+            "grass"
+        ],
+        "equipment": []
+    },
+    "wood": {
+        "name": "wood",
+        "quantity": 1,
+        "action": "do",
+        "collecting_resource": [
+            "tree"
+        ],
+        "equipment": []
+    },
+    "table": {
+        "name": "table",
+        "quantity": 1,
+        "action": "place_table",
+        "crafting_platform": [],
+        "crafting_material": {
+            "wood": 2
+        }
+    },
+    "wood_sword": {
+        "name": "wood_sword",
+        "quantity": 1,
+        "action": "make_wood_sword",
+        "crafting_platform": [
+            "table"
+        ],
+        "crafting_material": {
+            "wood": 1
+        }
+    },
+    "wood_pickaxe": {
+        "name": "wood_pickaxe",
+        "quantity": 1,
+        "action": "make_wood_pickaxe",
+        "crafting_platform": [
+            "table"
+        ],
+        "crafting_material": {
+            "wood": 1
+        }
+    },
+    "stone": {
+        "name": "stone",
+        "quantity": 1,
+        "action": "do",
+        "collecting_resource": [
+            "stone"
+        ],
+        "equipment": [
+            "wood_pickaxe"
+        ]
+    },
+    "coal": {
+        "name": "coal",
+        "quantity": 1,
+        "action": "do",
+        "collecting_resource": [
+            "coal"
+        ],
+        "equipment": [
+            "wood_pickaxe"
+        ]
+    },
+    "stone_pickaxe": {
+        "name": "stone_pickaxe",
+        "quantity": 1,
+        "action": "make_stone_pickaxe",
+        "crafting_platform": [
+            "table"
+        ],
+        "crafting_material": {
+            "wood": 1,
+            "stone": 1
+        }
+    },
+    "stone_sword": {
+        "name": "stone_sword",
+        "quantity": 1,
+        "action": "make_stone_sword",
+        "crafting_platform": [
+            "table"
+        ],
+        "crafting_material": {
+            "wood": 1,
+            "stone": 1
+        }
+    },
+    "furnace": {
+        "name": "furnace",
+        "quantity": 1,
+        "action": "place_furnace",
+        "crafting_platform": [],
+        "crafting_material": {
+            "stone": 4
+        }
+    },
+    "iron": {
+        "name": "iron",
+        "quantity": 1,
+        "action": "do",
+        "collecting_resource": [
+            "iron"
+        ],
+        "equipment": [
+            "stone_pickaxe"
+        ]
+    },
+    "iron_pickaxe": {
+        "name": "iron_pickaxe",
+        "quantity": 1,
+        "action": "make_iron_pickaxe",
+        "crafting_platform": [
+            "table", "furnace"
+        ],
+        "crafting_material": {
+            "wood": 1,
+            "coal": 1,
+            "iron": 1
+        }
+    },
+    "iron_sword": {
+        "name": "iron_sword",
+        "quantity": 1,
+        "action": "make_iron_sword",
+        "crafting_platform": [
+            "table", "furnace"
+        ],
+        "crafting_material": {
+            "wood": 1,
+            "coal": 1,
+            "iron": 1
+        }
+    }
+}

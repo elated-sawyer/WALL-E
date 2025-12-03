@@ -1,0 +1,180 @@
+walkable:
+  - grass
+  - path
+  - sand
+
+walkable_effect:
+  stone: {walkable: false, walk_health: 0, dieable: false}
+  diamond: {walkable: false, walk_health: 0, dieable: false}
+  coal: {walkable: false, walk_health: 0, dieable: false}
+  iron: {walkable: false, walk_health: 0, dieable: false}
+  water: {walkable: false, walk_health: 0, dieable: false}
+  lava: {walkable: true, walk_health: 0, dieable: true}
+  grass: {walkable: true, walk_health: 0, dieable: false}
+  path: {walkable: true, walk_health: 0, dieable: false}
+  sand: {walkable: true, walk_health: 0, dieable: false}
+  tree: {walkable: false, walk_health: 0, dieable: false}
+
+items:
+  health: {max: 9, initial: 9}
+  food: {max: 9, initial: 9}
+  drink: {max: 9, initial: 9}
+  energy: {max: 9, initial: 9}
+  sapling: {max: 9, initial: 0}
+  wood: {max: 9, initial: 0}
+  stone: {max: 9, initial: 0}
+  coal: {max: 9, initial: 0}
+  iron: {max: 9, initial: 0}
+  diamond: {max: 9, initial: 0}
+  wood_pickaxe: {max: 9, initial: 0}
+  stone_pickaxe: {max: 9, initial: 0}
+  iron_pickaxe: {max: 9, initial: 0}
+  wood_sword: {max: 9, initial: 0}
+  stone_sword: {max: 9, initial: 0}
+  iron_sword: {max: 9, initial: 0}
+
+# pick:
+#   wood_pickaxe: {require: {}, receive: {wood_pickaxe: 1}, leaves: grass}
+#   stone_pickaxe: {require: {}, receive: {stone_pickaxe: 1}, leaves: grass}
+#   iron_pickaxe: {require: {}, receive: {iron_pickaxe: 1}, leaves: grass}
+#   table: {require: {}, receive: {table: 1}, leaves: grass}
+#   furnace: {require: {}, receive: {furnace: 1}, leaves: grass}
+
+
+achievements:
+  - collect_coal
+  - collect_diamond
+  - collect_drink
+  - collect_iron
+  - collect_sapling
+  - collect_stone
+  - collect_wood
+  - kill_skeleton
+  - kill_zombie
+  - kill_cow
+  - eat_plant
+  - make_iron_pickaxe
+  - make_iron_sword
+  - make_stone_pickaxe
+  - make_stone_sword
+  - make_wood_pickaxe
+  - make_wood_sword
+  - place_furnace
+  - place_plant
+  - place_stone
+  - place_table
+  - wake_up
+
+terrain_neighbour:
+  coal: stone
+  iron: stone
+  diamond: stone
+  lava: stone
+  tree: grass
+  player: grass
+  water: sand
+  
+
+name2name: 
+  water: water
+  grass: grass
+  stone: stone
+  path: path
+  sand: sand
+  tree: tree
+  lava: lava
+  coal: coal
+  iron: iron
+  diamond: diamond
+npc_objects:
+  cow:
+    eatable: true
+    defeatable: false
+    attackable: false
+    arrowable: false
+    closable: false
+    can_walk: true
+    closable_health_damage_func: 0
+    eat_health_damage_func: 0
+    arrow_damage_func: 0
+    inc_food_func: 1
+    inc_thirst_func: 0
+  zombie:
+    eatable: false
+    defeatable: true
+    attackable: true
+    arrowable: false
+    closable: true
+    can_walk: true
+    closable_health_damage_func: -1
+    eat_health_damage_func: 0
+    arrow_damage_func: 0
+    inc_food_func: 0
+    inc_thirst_func: 0
+  skeleton:
+    eatable: false
+    defeatable: true
+    attackable: false
+    arrowable: true
+    closable: false
+    can_walk: true
+    closable_health_damage_func: 0
+    eat_health_damage_func: 0
+    arrow_damage_func: -1
+    inc_food_func: 0
+    inc_thirst_func: 0
+  plant:
+    eatable: true
+    defeatable: false
+    attackable: false
+    arrowable: false
+    closable: false
+    can_walk: false
+    closable_health_damage_func: 0
+    eat_health_damage_func: 0
+    arrow_damage_func: 0
+    inc_food_func: 1
+    inc_thirst_func: 0
+
+drink:
+  lava:
+    inc_drink_func: 0
+    inc_damage_func: 0
+    inc_food_func: 0
+  water:
+    inc_drink_func: 1
+    inc_damage_func: 0
+    inc_food_func: 0
+
+ignitability:
+  wood: true
+  coal: true
+  iron: true
+  diamond: false
+  stone: false
+
+
+collect:
+  tree: {require: {}, receive: {wood: 1}, leaves: {material: grass, object: null}}
+  stone: {require: {wood_pickaxe: 1}, receive: {stone: 1}, leaves: {material: path, object: null}}
+  coal: {require: {wood_pickaxe: 1}, receive: {coal: 1}, leaves: {material: path, object: null}}
+  iron: {require: {stone_pickaxe: 1}, receive: {iron: 1}, leaves: {material: path, object: null}}
+  diamond: {require: {iron_pickaxe: 1}, receive: {diamond: 1}, leaves: {material: path, object: null}}
+  water: {require: {}, receive: {drink: 1}, leaves: {material: water, object: null}}
+  lava: {require: {}, receive: {drink: 1}, leaves: {material: lava, object: null}}
+  grass: {require: {}, receive: {sapling: {amount: 1, probability: 0.1}}, leaves: {material: grass, object: null}}
+  sand: {require: {}, receive: {}, leaves: {material: sand , object: null}}
+
+place:
+  stone: {uses: {stone: 1}, where: [grass, sand, path, water, lava], type: material}
+  table: {uses: {wood: 2}, where: [grass, sand, path], type: material}
+  furnace: {uses: {stone: 4}, where: [grass, sand, path], type: material}
+  plant: {uses: {sapling: 1}, where: [grass], type: object}
+
+make:
+  wood_pickaxe: {uses: {wood: 1}, nearby: [table], gives: 1}
+  stone_pickaxe: {uses: {wood: 1, stone: 1}, nearby: [table], gives: 1}
+  iron_pickaxe: {uses: {wood: 1, coal: 1, iron: 1}, nearby: [table, furnace], gives: 1}
+  wood_sword: {uses: {wood: 1}, nearby: [table], gives: 1}
+  stone_sword: {uses: {wood: 1, stone: 1}, nearby: [table], gives: 1}
+  iron_sword: {uses: {wood: 1, coal: 1, iron: 1}, nearby: [table, furnace], gives: 1}

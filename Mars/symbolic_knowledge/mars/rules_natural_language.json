@@ -1,0 +1,16 @@
+{
+    "attack": [
+        "Rule 1: For action attack, if the creature is in front of the player and the player's health is low, the action will fail; Checking Method: Check if 'health' in 'status' is less than a threshold (e.g., 5).",
+        "Rule 2: For action attack, if the creature is too strong compared to the player's health, the action will fail; Checking Method: Check if 'health' in 'status' is less than the strength of the creature (assumed to be a predefined value).",
+        "Rule 3: For action attack, if the player does not have enough energy to perform the action, the action will fail; Checking Method: Check if 'energy' in 'status' is less than a threshold (e.g., 1)."
+    ],
+    "explore": [
+        "Rule 1: For action explore, if there is an object directly in front that is not passable (like a tree), the action will fail; Checking Method: Check if 'in_front' in 'initial_state' is a 'tree'.",
+        "Rule 2: For action explore, if the player is not in a valid position to move (like being surrounded by non-passable objects), the action will fail; Checking Method: Check if 'visible_objects' in 'initial_state' contains only non-passable objects in the direction of movement."
+    ],
+    "mine": [
+        "Rule 1: For action mine(block_name, amount), if the block_name is 'stone' and the player is in front of a stone, the action will fail; Checking Method: Check if 'in_front' is 'stone' and 'block_name' is 'stone'.",
+        "Rule 2: For action mine(block_name, amount), if the player's health is less than 10, the action will fail; Checking Method: Check if 'status.health' is less than 10.",
+        "Rule 3: For action mine(block_name, amount), if the player's energy is less than 5, the action will fail; Checking Method: Check if 'status.energy' is less than 5."
+    ]
+}

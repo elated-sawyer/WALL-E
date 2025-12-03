@@ -158,20 +158,36 @@ python run_rulelearning.py \
 ```bash
 bash run_s1.sh
 ```
-This stage collects trajectories, learns symbolic knowledge (rules, knowledge graphs, scene graphs), and generates executable code rules.
+<!-- This stage collects trajectories, learns symbolic knowledge (rules, knowledge graphs, scene graphs), and generates executable code rules. -->
 
 **Stage 2: MPC** (model-predictive control using learned knowledge)
 ```bash
 bash run_s2.sh
 ```
-This stage uses the learned symbolic knowledge from Stage 1 to perform MPC-based decision making.
+<!-- This stage uses the learned symbolic knowledge from Stage 1 to perform MPC-based decision making. -->
 
-**Note:** Stage 2 should be run after Stage 1 completes, as it relies on the symbolic knowledge learned in Stage 1.
+<!-- **Note:** Stage 2 should be run after Stage 1 completes, as it relies on the symbolic knowledge learned in Stage 1. -->
 
 
 ## Mars
 
-The backbone API model (GPT-4-32k) utilized in the Mars experiments has been discontinued. We are currently working on optimizing WALL-E's performance with the recommended replacement API model. The updated code will be released soon.
+
+**Stage 1: NeuroSymbolic Learning** (exploration and knowledge extraction)
+```bash
+python baselines/induction_from_reflexion_std/s1_run.py  --load_world final_world/default --episode 5
+```
+<!-- This stage collects trajectories, learns symbolic knowledge (rules, knowledge graphs, scene graphs), and generates executable code rules. -->
+
+**Stage 2: MPC** (model-predictive control using learned knowledge)
+```bash
+python baselines/induction_from_reflexion_std/s2_run.py  --load_world final_world/default --episode 5
+```
+<!-- This stage uses the learned symbolic knowledge from Stage 1 to perform MPC-based decision making. -->
+
+**Note:** Stage 2 should be run after Stage 1 completes, as it relies on the symbolic knowledge learned in Stage 1.
+
+
+The backbone API model (GPT-4-32k) employed in the Mars experiments is no longer available. In response, we are optimizing WALL-E’s knowledge-graph extraction pipeline using a program-learning approach for scene-graph induction. Updated code and models will be released in an upcoming version. Updated code and models will be released in an upcoming version.
 
 
 ## Citation

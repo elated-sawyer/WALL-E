@@ -1,0 +1,1938 @@
+{
+    "do": [
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "grass",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "tree",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -3
+                    },
+                    {
+                        "type": "path",
+                        "x": 4,
+                        "y": -1
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 2,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": 3,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -3,
+                        "y": 3
+                    },
+                    {
+                        "type": "cow",
+                        "x": -3,
+                        "y": -3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 9,
+                    "drink": 9,
+                    "energy": 9
+                },
+                "inventory": {}
+            },
+            "action": "do",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "stone",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 0
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 9,
+                    "drink": 9,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "do",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "stone",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 0
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 2
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 9,
+                    "drink": 9,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "do",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "stone",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 0
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 2
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 9,
+                    "drink": 9,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "do",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "stone",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 0
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 2
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 9,
+                    "drink": 9,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "do",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "stone",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 9,
+                    "drink": 9,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "do",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "stone",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 9,
+                    "drink": 8,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "do",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "stone",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -3,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 9,
+                    "drink": 8,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "do",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "stone",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -3,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 9,
+                    "drink": 8,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "do",
+            "action_result": false
+        }
+    ],
+    "place_table": [
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "stone",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 9,
+                    "drink": 9,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "place_table",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "stone",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -3,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 9,
+                    "drink": 8,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "place_table",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "stone",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -3,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 9,
+                    "drink": 8,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "place_table",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "diamond",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 8,
+                    "drink": 8,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "place_table",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "diamond",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 2
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 8,
+                    "drink": 8,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "place_table",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "path",
+                "in_front": "tree",
+                "visible_objects": [
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "path",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -2
+                    },
+                    {
+                        "type": "table",
+                        "x": -2,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -3,
+                        "y": 2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "path"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 7,
+                    "drink": 7,
+                    "energy": 8
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "stone": 3,
+                    "wood_pickaxe": 1
+                }
+            },
+            "action": "place_table",
+            "action_result": false
+        }
+    ],
+    "make_wood_pickaxe": [
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "stone",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 9,
+                    "drink": 9,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "make_wood_pickaxe",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "stone",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -3,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -1,
+                        "y": 3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "stone"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 8,
+                    "drink": 8,
+                    "energy": 9
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "wood": 2
+                }
+            },
+            "action": "make_wood_pickaxe",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "table",
+                "visible_objects": [
+                    {
+                        "type": "table",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "tree",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 2,
+                        "y": -2
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 2,
+                        "y": 0
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": 1,
+                        "y": 2
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "stone",
+                    "table"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 8,
+                    "drink": 8,
+                    "energy": 8
+                },
+                "inventory": {
+                    "sapling": 2
+                }
+            },
+            "action": "make_wood_pickaxe",
+            "action_result": false
+        }
+    ],
+    "move_up (to reach the tree at (0, 1) and mine it for wood)": [
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "table",
+                "visible_objects": [
+                    {
+                        "type": "table",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "tree",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "tree",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "path",
+                        "x": 2,
+                        "y": -2
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 2,
+                        "y": 0
+                    },
+                    {
+                        "type": "cow",
+                        "x": 1,
+                        "y": 2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -3,
+                        "y": 1
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "stone",
+                    "table"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 8,
+                    "drink": 8,
+                    "energy": 8
+                },
+                "inventory": {
+                    "sapling": 2
+                }
+            },
+            "action": "move_up (to reach the tree at (0, 1) and mine it for wood)",
+            "action_result": false
+        }
+    ],
+    "make_stone_pickaxe": [
+        {
+            "initial_state": {
+                "position": "path",
+                "in_front": "tree",
+                "visible_objects": [
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "path",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 0,
+                        "y": -2
+                    },
+                    {
+                        "type": "table",
+                        "x": -2,
+                        "y": 1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -2,
+                        "y": 3
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "path"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 7,
+                    "drink": 7,
+                    "energy": 8
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "stone": 3,
+                    "wood_pickaxe": 1
+                }
+            },
+            "action": "make_stone_pickaxe",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "cow",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "path",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "cow",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 2,
+                        "y": 1
+                    },
+                    {
+                        "type": "table",
+                        "x": -2,
+                        "y": 0
+                    },
+                    {
+                        "type": "skeleton",
+                        "x": 2,
+                        "y": -3
+                    },
+                    {
+                        "type": "cow",
+                        "x": -3,
+                        "y": 1
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "path",
+                    "cow"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 7,
+                    "drink": 6,
+                    "energy": 7
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "stone": 4,
+                    "wood_pickaxe": 1
+                }
+            },
+            "action": "make_stone_pickaxe",
+            "action_result": false
+        },
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "cow",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "path",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "cow",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 2,
+                        "y": 1
+                    },
+                    {
+                        "type": "table",
+                        "x": -2,
+                        "y": 0
+                    },
+                    {
+                        "type": "skeleton",
+                        "x": 2,
+                        "y": -3
+                    },
+                    {
+                        "type": "arrow",
+                        "x": 2,
+                        "y": -2
+                    },
+                    {
+                        "type": "cow",
+                        "x": -3,
+                        "y": 1
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "path",
+                    "cow"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 7,
+                    "drink": 6,
+                    "energy": 7
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "stone": 4,
+                    "wood_pickaxe": 1
+                }
+            },
+            "action": "make_stone_pickaxe",
+            "action_result": false
+        }
+    ],
+    "move_down to approach the tree and gather wood.": [
+        {
+            "initial_state": {
+                "position": "grass",
+                "in_front": "cow",
+                "visible_objects": [
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 0
+                    },
+                    {
+                        "type": "diamond",
+                        "x": 1,
+                        "y": 0
+                    },
+                    {
+                        "type": "path",
+                        "x": 0,
+                        "y": -1
+                    },
+                    {
+                        "type": "cow",
+                        "x": 0,
+                        "y": 1
+                    },
+                    {
+                        "type": "tree",
+                        "x": -1,
+                        "y": -1
+                    },
+                    {
+                        "type": "path",
+                        "x": 1,
+                        "y": -1
+                    },
+                    {
+                        "type": "grass",
+                        "x": -1,
+                        "y": 1
+                    },
+                    {
+                        "type": "grass",
+                        "x": 1,
+                        "y": 1
+                    },
+                    {
+                        "type": "stone",
+                        "x": 2,
+                        "y": 1
+                    },
+                    {
+                        "type": "table",
+                        "x": -2,
+                        "y": 0
+                    },
+                    {
+                        "type": "skeleton",
+                        "x": 1,
+                        "y": -3
+                    },
+                    {
+                        "type": "arrow",
+                        "x": 2,
+                        "y": -1
+                    },
+                    {
+                        "type": "cow",
+                        "x": -3,
+                        "y": 1
+                    }
+                ],
+                "near_objects": [
+                    "tree",
+                    "grass",
+                    "diamond",
+                    "path",
+                    "cow"
+                ],
+                "status": {
+                    "health": 9,
+                    "food": 7,
+                    "drink": 6,
+                    "energy": 7
+                },
+                "inventory": {
+                    "sapling": 2,
+                    "stone": 4,
+                    "wood_pickaxe": 1
+                }
+            },
+            "action": "move_down to approach the tree and gather wood.",
+            "action_result": false
+        }
+    ]
+}

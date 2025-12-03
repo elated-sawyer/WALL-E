@@ -1,0 +1,49 @@
+{
+    "selected_rules": [
+        "Rule_1_explore",
+        "Rule_1_mine",
+        "Rule_3_attack"
+    ],
+    "sorted_rules": [
+        [
+            "Rule_1_explore",
+            [
+                "explore_0"
+            ]
+        ],
+        [
+            "Rule_3_explore",
+            [
+                "explore_0"
+            ]
+        ],
+        [
+            "Rule_1_mine",
+            [
+                "mine_0"
+            ]
+        ],
+        [
+            "Rule_3_attack",
+            [
+                "attack_0"
+            ]
+        ],
+        [
+            "Rule_101_explore",
+            []
+        ],
+        [
+            "Rule_102_explore",
+            []
+        ],
+        [
+            "Rule_1_attack",
+            []
+        ],
+        [
+            "Rule_2_attack",
+            []
+        ]
+    ]
+}

@@ -1,0 +1,40 @@
+Terrain Walkability and Effects:
+1. Grass, path, and sand are walkable without any health effects or risks.
+2. Stone, diamond, coal, iron, and water are not walkable and have no health or death effects.
+3. Lava is walkable but can cause death.
+
+NPC Characteristics:
+1. cow can be eaten and give food points; cow cannot attack player; cow cannot shoot.
+2. zombie cannot be eaten; zombie can walk to player and attack player, causing the player's health to decrease; zombie cannot shoot.
+3. skeleton cannot be eaten; skeleton can shoot and cause the player's health to increase.
+4. ripe-plant can be eaten and give food points; ripe-plant cannot walk; ripe-plant cannot shoot.
+
+Drink Characteristics:
+1. drink lava cannot effect drink points, health points and food points.
+2. drink water can increase drink points.
+
+Task Achievements:
+Collect items:
+1. Collecting from a tree without any tools yields 1 wood and leaves behind grass.
+2. Collecting from stone with a wood pickaxe yields 1 stone and leaves behind path.
+3. Collecting from coal with a wood pickaxe yields 1 coal and leaves behind path.
+4. Collecting from iron with a stone pickaxe yields 1 iron and leaves behind path.
+5. Collecting from diamond with an iron pickaxe yields 1 diamond and leaves behind path.
+6. Collecting from water without any tools yields 1 drink and leaves behind water.
+7. Collecting from lava without any tools yields 1 drink and leaves behind lava.
+8. Collecting from grass without any tools yields 0-1 sapling and leaves behind grass.
+9. Collecting from sand without any tools yields nothing and leaves behind sand.
+
+Place something:
+1. You can place 1 stone on grass, sand, path, water, or lava.
+2. You can place a table on grass, sand, or path using 2 wood.
+3. You can place a furnace on grass, sand, or path using 4 stone.
+4. You can place a plant on grass using 1 sapling.
+
+Make tools:
+1. You can make a wood pickaxe using 1 wood, near a table.
+2. You can make a stone pickaxe using 1 wood and 1 stone, near a table.
+3. You can make an iron pickaxe using 1 wood, 1 coal, and 1 iron, near a table and furnace.
+4. You can make a wood sword using 1 wood, near a table.
+5. You can make a stone sword using 1 wood and 1 stone, near a table.
+6. You can make an iron sword using 1 wood, 1 coal, and 1 iron, near a table and furnace.

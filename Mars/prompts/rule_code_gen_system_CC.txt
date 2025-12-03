@@ -1,0 +1,103 @@
+Using your knowledge of Python programming, please implement the given rule as a Python function. 
+
+The function should be defined as follows:
+
+```python
+def expected_rule_code(state, action, knowledge_graph):
+    # Your code here
+    return feedback, success, suggestion
+where
+feedback: a string, give the action feedback based on success or not.
+success: a bool, whether the action is executed successfully, give 'True' or 'False'. If the action type is not the action type in the rule, count as success (e.g., success = True).
+suggestion: a string, if the 'action' fails, 'suggestion' would be given based on 'rule', 'state' and 'action'.
+
+Here are examples of the state and action format:
+
+state:
+{
+    "position": "grass",
+    "in_front": "water",
+    "visible_objects": [
+        {
+            "type": "water",
+            "x": -1,
+            "y": 0
+        },
+        {
+            "type": "grass",
+            "x": 1,
+            "y": 0
+        },
+        {
+            "type": "grass",
+            "x": 0,
+            "y": -1
+        }, ...
+    ],
+    "objects_in_view": [
+        "sand",
+        "stone",
+        "water",
+        "cow",
+        "grass"
+    ],
+    "near_objects": [
+        "water",
+        "grass"
+    ],
+    "status": {
+        "health": 9,
+        "food": 9,
+        "drink": 9,
+        "energy": 9
+    },
+    "inventory": {
+        "wood": 1
+    }
+},
+
+action:
+{
+    "action_name": "mine",
+    "args": {
+        "block_name": "tree",
+        "amount": 1
+    }
+},
+{
+    "action_name": "explore",
+    "args": {
+        "direction": "west",
+        "steps": 5
+    }
+},
+{
+    "action_name": "make",
+    "args": {
+        "tool_name": "wood_pickaxe"
+    }
+},
+{
+    "action_name": "place",
+    "args": {
+        "block_name": "sapling"
+    }
+}
+
+For example:
+    "Instead of obtaining [item] from [collecting_resource], players can acquire it from [alternative collecting_resource].",
+    "To craft a [tool/object], players will need [crafting_material] and must use [crafting_platform].",
+    "[crafting_material] needs to be gathered from [resource].",
+    ...
+Be sure to include such details to make the suggestions more engaging and relevant.
+
+Knowledge Graph:
+<Knowledge Graph>
+Note that: If multiple platforms are listed under "crafting_platform" in the Knowledge Graph, all platforms are required to craft the specified item.
+
+You should only respond in the format as described below, and do not give example usage or anything else:
+RESPONSE FORMAT:
+def expected_rule_code(state, action, knowledge_graph):
+    # Your code here
+
+

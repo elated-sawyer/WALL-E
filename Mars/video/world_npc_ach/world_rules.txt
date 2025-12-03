@@ -1,0 +1,41 @@
+Terrain Walkability and Effects:
+1. Grass, path, and sand are walkable without any health effects or risks.
+2. Stone, diamond, coal, iron, and water are not walkable and have no health or death effects.
+3. Lava is walkable but can cause death.
+4. Moving can consume food, drink, energy from agent's status.
+
+NPC Characteristics:
+1. cow can be eaten and gives health, food and drink points; cow can walk to player and attack player, causing the player's health to decrease; cow cannot shoot.
+2. zombie cannot be eaten; zombie can walk to player and attack player, causing the player's health to decrease; zombie cannot shoot.
+3. skeleton cannot be eaten; skeleton can walk to player and attack player, but cannot cause the player's health to decrease; skeleton cannot shoot.
+4. ripe-plant can be eaten and give health and food points but decrease drink points; ripe-plant can walk; ripe-plant can shoot and cause the player's health to increase.
+
+Drink Characteristics:
+1. drink lava (interact with lava block) can increase drink points and decrease health points and increase food points.
+2. drink water (interact with water block) can decrease drink points and increase health and food points.
+
+Task Achievements:
+Collect items:
+1. Collecting from (Interact with) a tree without any tools yields 1 wood or 1 diamond with a probability of 0.5 and leaves behind coal.
+2. Collecting from (Interact with) a stone withou any tools yields 1 stone and leaves behind path.
+3. Collecting from (Interact with) coal without any tools yields 1 coal and leaves behind water.
+4. Collecting from (Interact with) iron with a stone pickaxe yields 1 iron and leaves behind water.
+5. Collecting from (Interact with) diamond with an iron pickaxe yields 1 diamond and leaves behind diamond.
+6. Collecting from (Interact with) water with a sapling yields 1 drink and leaves behind lava and a skeleton with a probability of 0.1.
+7. Collecting from (Interact with) lava with a sapling yields 1 drink and leaves behind water and a zombie with a probability of 0.1.
+8. Collecting from (Interact with) grass with a wood pickaxe yields 1 sapling with a probability of 0.1 and leaves behind iron.
+9. Collecting from (Interact with) sand without any tools yields 1 sapling and leaves behind coal and a skeleton with a probability of 0.1.
+
+Place something:
+1. You can place a stone on grass, sand, path, water, or lava.
+2. You can place a table on grass, sand, or path using 4 coal.
+3. You can place a furnace on grass, sand, or path using 4 stone.
+4. You can place a plant on grass, sand, path, water, lava, stone, coal, iron, or diamond using 1 sapling.
+
+Craft tools:
+1. You can make a wood pickaxe using 1 wood, near a table.
+2. You can make a stone pickaxe using 1 wood and 1 stone, near a table.
+3. You can make an iron pickaxe using 1 wood, 1 coal, and 1 iron, near a table and furnace.
+4. You can make a wood sword using 1 wood, near a table.
+5. You can make a stone sword using 1 wood and 1 stone, near a table.
+6. You can make an iron sword using 1 wood, 1 coal, and 1 iron, near a table and furnace.

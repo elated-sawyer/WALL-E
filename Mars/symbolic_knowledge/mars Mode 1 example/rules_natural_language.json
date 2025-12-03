@@ -1,0 +1,16 @@
+{
+    "explore": [
+        "Rule 1: For action explore, if the initial state has visible objects including a creature (e.g., skeleton), the action will fail; Checking Method: Check if 'visible_objects' contains any creature types.",
+        "Rule 2: For action explore, if the initial state has no inventory items, the action will fail; Checking Method: Check if 'inventory' is empty.",
+        "Rule 3: For action explore, if the initial state has 'in_front' as a non-grass block (e.g., arrow), the action will fail; Checking Method: Check if 'in_front' is not 'grass'."
+    ],
+    "mine": [
+        "Rule 1: For action mine(block_name, amount), if the block_name is 'stone' and the player is in front of a 'path' or 'skeleton', the action will fail; Checking Method: Check if 'in_front' is 'path' or 'skeleton'.",
+        "Rule 2: For action mine(block_name, amount), if the block_name is 'tree' and the player has no inventory, the action will succeed; Checking Method: Check if 'inventory' is empty."
+    ],
+    "attack": [
+        "Rule 1: For action attack, if the creature is in front of the player and the player's health is low, the action will fail; Checking Method: Check if 'in_front' is 'skeleton' and 'status.health' is less than a threshold (e.g., 5).",
+        "Rule 2: For action attack, if the player does not have enough energy to perform the action, the action will fail; Checking Method: Check if 'status.energy' is less than a threshold (e.g., 2).",
+        "Rule 3: For action attack, if the player is not facing the creature, the action will fail; Checking Method: Check if 'in_front' is not equal to the creature type being attacked."
+    ]
+}

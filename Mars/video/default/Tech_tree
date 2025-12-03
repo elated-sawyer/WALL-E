@@ -1,0 +1,148 @@
+// Graph
+digraph {
+	mine_tree [label="mine_tree
+
+None
+ROOT"]
+	mine_stone [label="mine_stone
+
+None"]
+	mine_coal [label="mine_coal
+
+None"]
+	mine_iron [label="mine_iron
+
+None"]
+	mine_diamond [label="mine_diamond
+
+None"]
+	mine_water [label="mine_water
+
+None
+ROOT"]
+	mine_lava [label="mine_lava
+
+None
+ROOT"]
+	mine_grass [label="mine_grass
+
+None
+ROOT"]
+	make_wood_pickaxe [label="make_wood_pickaxe
+
+None"]
+	make_stone_pickaxe [label="make_stone_pickaxe
+
+None"]
+	make_iron_pickaxe [label="make_iron_pickaxe
+
+None"]
+	make_wood_sword [label="make_wood_sword
+
+None"]
+	make_stone_sword [label="make_stone_sword
+
+None"]
+	make_iron_sword [label="make_iron_sword
+
+None"]
+	place_stone [label="place_stone
+
+None"]
+	place_table [label="place_table
+
+None"]
+	place_furnace [label="place_furnace
+
+None"]
+	place_plant [label="place_plant
+
+None"]
+	has_wood [label="has_wood
+
+None"]
+	has_stone [label="has_stone
+
+None"]
+	has_coal [label="has_coal
+
+None"]
+	has_iron [label="has_iron
+
+None"]
+	has_diamond [label="has_diamond
+
+None"]
+	has_drink [label="has_drink
+OR
+None"]
+	has_sapling [label="has_sapling
+
+None"]
+	has_wood_pickaxe [label="has_wood_pickaxe
+
+None"]
+	has_stone_pickaxe [label="has_stone_pickaxe
+
+None"]
+	has_iron_pickaxe [label="has_iron_pickaxe
+
+None"]
+	has_wood_sword [label="has_wood_sword
+
+None"]
+	has_stone_sword [label="has_stone_sword
+
+None"]
+	has_iron_sword [label="has_iron_sword
+
+None"]
+	nearby_stone [label="nearby_stone
+
+None"]
+	nearby_table [label="nearby_table
+
+None"]
+	nearby_furnace [label="nearby_furnace
+
+None"]
+	nearby_plant [label="nearby_plant
+
+None"]
+	has_wood_pickaxe -> mine_stone
+	has_wood_pickaxe -> mine_coal
+	has_stone_pickaxe -> mine_iron
+	has_iron_pickaxe -> mine_diamond
+	nearby_table -> make_wood_pickaxe
+	has_stone -> make_stone_pickaxe
+	has_coal -> make_iron_pickaxe
+	has_iron -> make_iron_pickaxe
+	nearby_furnace -> make_iron_pickaxe
+	nearby_table -> make_wood_sword
+	has_stone -> make_stone_sword
+	has_coal -> make_iron_sword
+	has_iron -> make_iron_sword
+	nearby_furnace -> make_iron_sword
+	has_stone -> place_stone
+	has_wood -> place_table
+	has_stone -> place_furnace
+	has_sapling -> place_plant
+	mine_tree -> has_wood
+	mine_stone -> has_stone
+	mine_coal -> has_coal
+	mine_iron -> has_iron
+	mine_diamond -> has_diamond
+	mine_water -> has_drink
+	mine_lava -> has_drink
+	mine_grass -> has_sapling
+	make_wood_pickaxe -> has_wood_pickaxe
+	make_stone_pickaxe -> has_stone_pickaxe
+	make_iron_pickaxe -> has_iron_pickaxe
+	make_wood_sword -> has_wood_sword
+	make_stone_sword -> has_stone_sword
+	make_iron_sword -> has_iron_sword
+	place_stone -> nearby_stone
+	place_table -> nearby_table
+	place_furnace -> nearby_furnace
+	place_plant -> nearby_plant
+}

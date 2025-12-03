@@ -1,0 +1,29 @@
+0. Stone, path, and sand are walkable without any health effects or risks.
+1. Diamond, coal, lava, and tree are not walkable and have no health or death effects.
+2. Water is walkable and can cuase player lose health points.
+3. Grass and iron are walkable can cause the player to gain health points.
+4. cow can be eaten and give food points; cow cannot attack player; cow cannot shoot.
+5. zombie cannot be eaten; zombie can walk to player and attack player, causing the player's health to decrease; zombie cannot shoot.
+6. skeleton cannot be eaten; skeleton can shoot and cause the player's health to increase.
+7. ripe-plant can be eaten and give food points; ripe-plant cannot walk; ripe-plant cannot shoot.
+8. drink (Interact with) lava cannot effect drink points, health points and food points.
+9. drink (Interact with) water can increase drink points.
+10. Collecting from (Interact with) a tree without any tools yields 1 coal and converts it to a path block.
+11. Collecting from (Interact with) stone with a wood pickaxe has a 50% chance of yielding 1 stone and a 50% chance of yielding 1 wood, and converts it to a diamond block.
+12. Collecting from (Interact with) coal with a wood pickaxe yields 1 coal and converts it to a lava block.
+13. Collecting from (Interact with) iron with a stone pickaxe yields 1 iron and converts it to a lava block.
+14. Collecting from (Interact with) diamond with a stone pickaxe yields 1 diamond and converts it to a water block.
+15. Collecting from (Interact with) water without any tools yields 1 drink and converts it to a water block and leave behind a skeleton with a 10% probability.
+16. Collecting from (Interact with) lava with a sapling yields 1 drink and converts it to a stone block.
+17. Collecting from (Interact with) grass with a wood pickaxe yields a 10% chance of getting 1 sapling and converts it to a grass block.
+18. Collecting from (Interact with) sand with an iron pickaxe yields 1 coal and converts it to a lava block.
+19. You can place 1 stone on grass, sand, path, water, or lava.
+20. You can place a table on grass, sand, or path using 4 stone.
+21. You can place a furnace on grass, sand, or path using 4 coal.
+22. You can place a plant on grass, sand, path, water, lava, stone, coal, iron, or diamond using 1 sapling.
+23. You can make a wood pickaxe using 1 wood, near a table.
+24. You can make a stone pickaxe using 1 wood and 1 stone, near a table and furnace.
+25. You can make an iron pickaxe using 1 wood, 1 coal, and 1 iron, near a table.
+26. You can make a wood sword using 1 wood, near a table.
+27. You can make a stone sword using 1 wood and 1 stone, near a table and furnace.
+28. You can make an iron sword using 1 wood, 1 coal, and 1 iron, near a table.

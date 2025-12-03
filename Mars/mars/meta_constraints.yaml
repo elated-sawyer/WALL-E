@@ -1,0 +1,625 @@
+actions:
+  - noop
+  - move_left
+  - move_right
+  - move_up
+  - move_down
+  - do
+  - sleep
+  - place_stone
+  - place_table
+  - place_furnace
+  - place_plant
+  - make_wood_pickaxe
+  - make_stone_pickaxe
+  - make_iron_pickaxe
+  - make_wood_sword
+  - make_stone_sword
+  - make_iron_sword
+
+materials:
+  - water
+  - grass
+  - stone
+  - path
+  - sand
+  - tree
+  - lava
+  - coal
+  - iron
+  - diamond
+  - table
+  - furnace
+
+
+terrain:
+  - water
+  - grass
+  - stone
+  - path
+  - sand
+  - tree
+  - lava
+  - coal
+  - iron
+  - diamond
+
+
+walkable:
+  - grass
+  - path
+  - sand
+
+items:
+  health: {max: 9, initial: 9}
+  food: {max: 9, initial: 9}
+  drink: {max: 9, initial: 9}
+  energy: {max: 9, initial: 9}
+  sapling: {max: 9, initial: 0}
+  wood: {max: 9, initial: 0}
+  stone: {max: 9, initial: 0}
+  coal: {max: 9, initial: 0}
+  iron: {max: 9, initial: 0}
+  diamond: {max: 9, initial: 0}
+  wood_pickaxe: {max: 9, initial: 0}
+  stone_pickaxe: {max: 9, initial: 0}
+  iron_pickaxe: {max: 9, initial: 0}
+  wood_sword: {max: 9, initial: 0}
+  stone_sword: {max: 9, initial: 0}
+  iron_sword: {max: 9, initial: 0}
+
+
+achievements:
+  - collect_coal
+  - collect_diamond
+  - collect_drink
+  - collect_iron
+  - collect_sapling
+  - collect_stone
+  - collect_wood
+  - kill_skeleton
+  - kill_zombie
+  - kill_cow
+  - eat_plant
+  - make_iron_pickaxe
+  - make_iron_sword
+  - make_stone_pickaxe
+  - make_stone_sword
+  - make_wood_pickaxe
+  - make_wood_sword
+  - place_furnace
+  - place_plant
+  - place_stone
+  - place_table
+  - wake_up
+
+  
+# default_material_neighbour:
+#   coal: stone
+#   iron: stone
+#   diamond: stone
+#   tree: grass
+#   player: grass
+#   water: sand
+
+# # changeable = ['coal', 'iron', 'diamond', 'water', 'tree', 'player']
+# changeable:
+#   - coal
+#   - iron
+#   - diamond
+#   - water
+#   - tree
+#   - player
+
+# materials_neighbour_1:
+#   water: ['grass', 'path', 'sand']
+#   diamond: ['grass','path', 'coal','iron','stone','sand','tree']
+#   coal: ['grass', 'path', 'stone','sand','tree']
+#   iron: ['grass', 'path', 'stone','sand','tree']
+#   tree: ['grass', 'path', 'sand']
+#   player: ['grass', 'path', 'sand']
+
+# materials_neighbour_2:
+#   water: ['grass', 'path','coal','iron','diamond','stone','sand','tree','lava']
+#   diamond: ['grass','path', 'coal','iron','stone','sand','tree','water','lava']
+#   coal: ['grass', 'path', 'iron','stone','sand','tree','water','lava']
+#   iron: ['grass', 'path','coal','stone','sand','tree', 'water','lava']
+#   tree: ['grass', 'path', 'sand']
+#   player: ['grass', 'path', 'sand']
+
+materials_neighbour_1:
+  water: ['grass', 'path', 'sand', 'water']
+  diamond: ['grass','path', 'sand', 'coal','iron','stone','tree', 'diamond']
+  coal: ['grass', 'path', 'sand', 'stone', 'tree', 'coal']
+  iron: ['grass', 'path', 'sand', 'stone','tree', 'iron']
+  tree: ['grass', 'path', 'sand']
+  player: ['grass', 'path', 'sand']
+
+materials_neighbour_2:
+  water: ['grass', 'path','coal','iron','diamond','stone','sand','tree','lava', 'water']
+  diamond: ['grass','path', 'coal','iron','stone','sand','tree','water','lava']
+  coal: ['grass', 'path', 'iron','stone','sand','tree','water','lava']
+  iron: ['grass', 'path','coal','stone','sand','tree', 'water','lava']
+  tree: ['grass', 'path', 'sand']
+  player: ['grass', 'path', 'sand']
+
+terrain_materials:
+  - water
+  - grass
+  - stone
+  - path
+  - sand
+  - tree
+  - lava
+  - coal
+  - iron
+  - diamond
+
+collect_items:
+  - wood
+  - stone
+  - coal
+  - iron
+  - diamond
+  - sapling
+  - drink
+
+collect_achievements_1:
+  tree/stone/coal/iron/diamond/grass:
+    require:
+        - {wood_pickaxe: 1}
+        - {stone_pickaxe: 1}
+        - {iron_pickaxe: 1}
+        - {}
+    receive[all]: # Each of the following appears at least once
+      - wood: 1
+      - stone: 1
+      - coal: 1
+      - iron: 1
+      - diamond: 1
+      - sapling: {amount: 1, probability: 0.1}
+
+    leaves: # 
+      material: 
+        - water
+        - tree
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - iron
+        - diamond
+      
+  water/lava:
+    require:
+      - {}
+      - sapling: 1
+    receive:
+      - drink: 1
+      - {}
+    leaves: # 
+      material: 
+        - water
+        - tree
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - iron
+        - diamond
+        # - wood_pickaxe
+        # - stone_pickaxe
+        # - iron_pickaxe
+      object: # zombie/cow/sketelon
+        - {zombie: 0.1}
+        - {cow: 0.1}
+        - {skeleton: 0.1}
+        - {}
+
+
+
+collect_achievements_2:
+  tree/grass:
+    require:
+      - {wood_pickaxe: 1}
+      - {stone_pickaxe: 1}
+      - {iron_pickaxe: 1}
+      - {}
+    receive:
+      - wood: 1
+      - stone: 1
+      - coal: 1
+      - iron: 1
+      - diamond: 1
+      - sapling: {amount: 1, probability: 0.1}
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+  stone:
+    require:
+      - {wood_pickaxe: 1}
+      - {stone_pickaxe: 1}
+      - {iron_pickaxe: 1}
+      - {}
+    receive:
+      - stone: 1
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+  coal:
+    require:
+      - {wood_pickaxe: 1}
+      - {stone_pickaxe: 1}
+      - {iron_pickaxe: 1}
+      - {}
+    receive:
+      - coal: 1
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+  iron:
+    require:
+      - {wood_pickaxe: 1}
+      - {stone_pickaxe: 1}
+      - {iron_pickaxe: 1}
+      - {}
+    receive:
+      - iron: 1
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+  diamond:
+    require:
+      - {wood_pickaxe: 1}
+      - {stone_pickaxe: 1}
+      - {iron_pickaxe: 1}
+      - {}
+    receive:
+      - diamond: 1
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+  
+  
+  water/lava:
+    require:
+      - {}
+      - sapling: 1
+    receive:
+      - drink: 1
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+      object: # zombie/cow/sketelon
+        - {zombie: 0.1}
+        - {cow: 0.1}
+        - {skeleton: 0.1}
+        - {}
+  sand:
+    require:
+      - {wood_pickaxe: 1}
+      - {stone_pickaxe: 1}
+      - {iron_pickaxe: 1}
+      - {}
+    receive:
+      - wood: 1
+      - stone: 1
+      - coal: 1
+      - iron: 1
+      - sapling: 1
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+      object: # zombie/cow/sketelon
+        - {zombie:0.1}
+        - {cow:0.1}
+        - {skeleton:0.1}
+        - ~
+
+
+
+collect_achievements_3:
+  tree/grass:
+    require:
+      - {wood_pickaxe: 1}
+      - {stone_pickaxe: 1}
+      - {iron_pickaxe: 1}
+      - {}
+    receive:
+      - wood: 1
+      - stone: 1
+      - coal: 1
+      - iron: 1
+      - diamond: 1
+      - sapling: {amount: 1, probability: 0.1}
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+  stone:
+    require:
+      - {wood_pickaxe: 1}
+      - {stone_pickaxe: 1}
+      - {iron_pickaxe: 1}
+      - {}
+    receive:
+      - {stone: {amount: 1, probability: 0.9}}
+    receive[any]:
+      - wood: {amount: 1, probability: 0.1}
+      - coal: {amount: 1, probability: 0.1}
+      - iron: {amount: 1, probability: 0.1}
+      - diamond: {amount: 1, probability: 0.1}
+      - sapling: {amount: 1, probability: 0.1}
+      - {}
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+  coal:
+    require:
+      - {wood_pickaxe: 1}
+      - {stone_pickaxe: 1}
+      - {iron_pickaxe: 1}
+      - {}
+    receive:
+      - {coal: {amount: 1, probability: 0.9}}
+    receive[any]:
+      - wood: {amount: 1, probability: 0.1}
+      - stone: {amount: 1, probability: 0.1}
+      - iron: {amount: 1, probability: 0.1}
+      - diamond: {amount: 1, probability: 0.1}
+      - sapling: {amount: 1, probability: 0.1}
+      - {}
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+  iron:
+    require:
+      - {wood_pickaxe: 1}
+      - {stone_pickaxe: 1}
+      - {iron_pickaxe: 1}
+      - {}
+    receive:
+      - {iron: {amount: 1, probability: 0.9}}
+    receive[any]:
+      - wood: {amount: 1, probability: 0.1}
+      - stone: {amount: 1, probability: 0.1}
+      - coal: {amount: 1, probability: 0.1}
+      - diamond: {amount: 1, probability: 0.1}
+      - sapling: {amount: 1, probability: 0.1}
+      - {}
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+  diamond:
+    require:
+      - {wood_pickaxe: 1}
+      - {stone_pickaxe: 1}
+      - {iron_pickaxe: 1}
+      - {}
+    receive:
+      - {diamond: {amount: 1, probability: 0.9}}
+    receive[any]:
+      - wood: {amount: 1, probability: 0.1}
+      - stone: {amount: 1, probability: 0.1}
+      - coal: {amount: 1, probability: 0.1}
+      - iron: {amount: 1, probability: 0.1}
+      - sapling: {amount: 1, probability: 0.1}
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+  
+  
+  water/lava:
+    require:
+      - {}
+      - sapling: 1
+    receive:
+      - drink: 1
+    receive[any]:
+      - wood: {amount: 1, probability: 0.1}
+      - stone: {amount: 1, probability: 0.1}
+      - coal: {amount: 1, probability: 0.1}
+      - iron  : {amount: 1, probability: 0.1}
+      - sapling: {amount: 1, probability: 0.1}
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+        # - table
+        # - furnace
+        # - wood_pickaxe
+        # - stone_pickaxe
+        # - iron_pickaxe
+      object: # zombie/cow/sketelon
+        - {zombie: 0.1}
+        - {cow: 0.1}
+        - {skeleton: 0.1}
+        - {}
+  sand:
+    require:
+      - {wood_pickaxe: 1}
+      - {stone_pickaxe: 1}
+      - {iron_pickaxe: 1}
+      - {}
+    receive[any]:
+      - wood: {amount: 1, probability: 0.1}
+      - stone: {amount: 1, probability: 0.1}
+      - coal: {amount: 1, probability: 0.1}
+      - iron: {amount: 1, probability: 0.1}
+      - sapling: {amount: 1, probability: 0.1}
+    leaves: # 
+      material: 
+        - tree
+        - water
+        - grass
+        - path
+        - sand
+        - stone
+        - lava
+        - coal
+        - diamond
+        - iron
+        # - table
+        # - furnace
+        # - wood_pickaxe
+        # - stone_pickaxe
+        # - iron_pickaxe
+      object: # zombie/cow/sketelon
+        - {zombie: 0.1}
+        - {cow: 0.1}
+        - {skeleton: 0.1}
+        - {}
+
+
+whether_ignitability:
+  - wood
+  - coal
+  - iron
+  - diamond
+  - stone
+
+place_achievements:
+  stone:
+    uses:
+      - stone: 1
+    where: [grass, sand, path, water, lava, stone, coal, iron, diamond]
+  table/furnace: # TODO amount待定 [保持一致性，就是可燃性]
+    uses:
+      - wood: 2
+      - coal: 8
+      - iron: 8
+      - stone: 4
+      - diamond: 2
+    where: [grass, sand, path] # 这不重要
+
+  plant:
+    uses:
+      - sapling: 1
+    where: [grass, sand, path, water, lava, stone, coal, iron, diamond]
+    
+
+# make_achievements: # 需要满足限制：名称和材质的对应，木槁里面一定要有木头，石槁里面一定要有石头，铁槁里面一定要有铁；另外如果一个制造过程越复杂说明它的攻击力越强？给单个物体的攻击力随机赋值
+#   wood_pickaxe/stone_pickaxe/iron_pickaxe/wood_sword/stone_sword/iron_sword:
+#     nearby:
+#       - table
+#       - furnace
+

@@ -1,0 +1,43 @@
+You are a helpful assistant with inductive reasoning. Given the history trajectory, including action and observation, you need to reflect on the action execution results and give the possible mechanism of the new game. The mechanism should be consistent with the game rules and the player's inventory information. 
+
+The actions in the transitions are introduced as follows:
+<move_left, move_right, move_up, move_down, do, sleep, place_stone, place_table, place_furnace, place_plant, make_wood_pickaxe, make_stone_pickaxe, make_iron_pickaxe, make_wood_sword, make_stone_sword, make_iron_sword, SUCCEED, FAILED>, where 'do' means to interact the block at front of the player, including mine the block, attack the creature, and drink; "SUCCEED" means that the goal is achieved; "FAILED" means that it is too hard to achieve the goal.
+
+
+and an array of rules：
+[
+    "Rule 1: For action ..., if..., ...; Checking Method: ...",
+    "Rule 2: For action ..., if..., ...; Checking Method: ...",
+    ...
+]
+
+
+
+Instructions:
+- Ensure the response can be parsed by Python `json.loads`, e.g.: no trailing commas, **no single quotes**, etc.
+- You need to dig up as many rules as possible that satisfy all transitions.
+- Extract and utilize only the features that influence the outcome of the action.
+- While generating a rule, you also need to state how to check if a transition satisfies this rule. Please be specific as to which and how 'state features' in 'initial state' need to be checked
+
+
+
+You should only respond in the format as described below:
+RESPONSE FORMAT:
+Reasoning: Based on the information I listed above and history dialogue, do reasoning about the mechanism of new game.
+Mechanism: The mechanism of the new game.
+
+Here are somes examples (these are just examples for format, do not necessarily reflect the knowledge of the game):
+Reasoning: The player's health decreased by 2 after shot by arrow, indicating that the arrow of skeleton is harmful to the player.
+Mechanism: The arrow of skeleton can cause damage to the player.
+
+Reasoning: The player is facing the water block and cannot enter the water block, indicating that the player cannot swim or the water block is not walkable.
+Mechanism: the water block is not walkable.
+
+Reasoning: The player has been mining the stone block for a long time but has not yet obtained the stone, indicating that the stone block cannot be mined by hand.
+Mechanism: The stone block cannot be mined, if you do not have 'pickaxe' in inventory; Checking Method: ....
+
+Reasoning: The player has been placing the table in the front stone block for a long time but has not yet placed the table, indicating that the table cannot be placed on the stone block.
+Mechanism: The table cannot be placed on the stone block; Checking Method: if 'in_front' is 'stone', action 'place_table' will fail.
+
+Reasoning: The player can place the table in the front grass block, indicating that the table can be placed on the grass block.
+Mechanism: The table can be placed on the grass block; Checking Method: if 'in_front' is 'grass', action 'place_table' will success.
